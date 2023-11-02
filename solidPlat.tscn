@@ -5,8 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ervui"]
 size = Vector2(304, 64)
 
-[node name="Floor" type="StaticBody2D"]
-position = Vector2(512, 256)
+[node name="solidPlat" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -2.5034e-06)

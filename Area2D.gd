@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
 @export_category("Player Properties")
-@export var moveSpeed = 250
-@export var jumpForce = 450
-@export var gravity = 30
+@export var moveSpeed = 490
+@export var jumpForce = 1050
+@export var gravity = 60
 @export var dashStep = 20
 @export var max_jump_count : int = 2
 @export var jump_count : int = 2
@@ -40,14 +40,14 @@ func movement(delta):
 	if dashActive == false:
 		var inputAxis = Input.get_axis("Left", "Right")
 		velocity = Vector2(inputAxis * moveSpeed, velocity.y)
-		position += velocity * delta
+		#position += velocity * delta
 		if velocity.x > 0:
 			direction = "right"
 			dashStep = abs(dashStep)
 		elif velocity.x < 0:
 			direction = "left"
 			dashStep = 0 - abs(dashStep)
-		move_and_slide()
+	move_and_slide()
 
 
 func handle_jumping():
@@ -72,23 +72,12 @@ func jump():
 
 func dash():
 	velocity = Vector2(velocity.x,velocity.y)
-	var currentY = position.y
 	dashActive = true
 	velocity.y = 0
 	
-	if velocity.x > 0 or direction == "right":
-		for n in 14:
-			await get_tree().create_timer(0.002).timeout
-			position.x += dashStep
-			position.y = currentY
-	elif velocity.x < 0 or direction == "left":
-		for n in 14:
-			await get_tree().create_timer(0.002).timeout
-			position.x += dashStep
-			position.y = currentY
-	elif velocity.x == 0:
-		for n in 14:
-			await get_tree().create_timer(0.002).timeout
-			position.x += dashStep
-			
+	for n in 7:
+		await get_tree().create_timer(0.002).timeout
+		position.x += dashStep
+	
 	dashActive = false
+

@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://crlj52c142iyd"]
+
+[ext_resource type="Texture2D" uid="uid://bvcjmhcueqg3g" path="res://art/Wood PlatForm.png" id="1_1jsfo"]
+
+[sub_resource type="GDScript" id="GDScript_2okvt"]
+script/source = "extends StaticBody2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_is5ad"]
+size = Vector2(20, 3.5)
+
+[sub_resource type="GDScript" id="GDScript_5t4ru"]
+script/source = "extends CollisionShape2D
+
+var node = Node2D.new()
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	node.set(\"disabled\", true)
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[node name="fallPlat" type="StaticBody2D"]
+scale = Vector2(8, 8)
+script = SubResource("GDScript_2okvt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_1jsfo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.25)
+shape = SubResource("RectangleShape2D_is5ad")
+script = SubResource("GDScript_5t4ru")

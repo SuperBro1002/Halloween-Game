@@ -1,21 +1,55 @@
-[gd_scene load_steps=3 format=3 uid="uid://c8vsyntvaavkc"]
+[gd_scene load_steps=7 format=3 uid="uid://c8vsyntvaavkc"]
 
 [ext_resource type="PackedScene" uid="uid://wpeebgc64b58" path="res://player.tscn" id="1_pfrt1"]
-[ext_resource type="PackedScene" uid="uid://b85lne138o0ux" path="res://floor.tscn" id="2_c1pie"]
+[ext_resource type="PackedScene" uid="uid://b85lne138o0ux" path="res://solidPlat.tscn" id="2_c1pie"]
+[ext_resource type="PackedScene" uid="uid://dfka6viqcea3" path="res://oneWayPlat.tscn" id="3_yde8x"]
+[ext_resource type="PackedScene" uid="uid://crlj52c142iyd" path="res://fallPlat.tscn" id="4_tiv12"]
+[ext_resource type="Texture2D" uid="uid://b2g8372ug8w33" path="res://art/bg1.jpg" id="5_xy2e0"]
+[ext_resource type="Texture2D" uid="uid://lbl6h2qi8bdb" path="res://art/bg2.jpg" id="6_gq2r2"]
 
 [node name="Level-1" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_pfrt1")]
-position = Vector2(256, 328)
-jumpForce = 550
+position = Vector2(360, 754)
 max_jump_count = 6
 double_jump = true
 
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(2, 0)
+scale = Vector2(2, 2)
+zoom = Vector2(0.5, 0.5)
+limit_left = -210
+limit_right = 2290
+limit_bottom = 1024
+drag_vertical_enabled = true
+drag_bottom_margin = 0.6
+
 [node name="Floor" parent="." instance=ExtResource("2_c1pie")]
-position = Vector2(272, 472)
+position = Vector2(336, 858)
 
 [node name="Floor2" parent="." instance=ExtResource("2_c1pie")]
-position = Vector2(832, 472)
+position = Vector2(1880, 872)
 
 [node name="Floor3" parent="." instance=ExtResource("2_c1pie")]
-position = Vector2(552, 568)
+position = Vector2(1136, 856)
+
+[node name="fallPlat" parent="." instance=ExtResource("4_tiv12")]
+position = Vector2(1488, 752)
+
+[node name="oneWayPlat" parent="." instance=ExtResource("3_yde8x")]
+position = Vector2(776, 728)
+
+[node name="bg1" type="Sprite2D" parent="."]
+visibility_layer = 524288
+z_index = -1
+position = Vector2(1040, -2696)
+texture = ExtResource("5_xy2e0")
+metadata/_edit_lock_ = true
+
+[node name="bg2" type="Sprite2D" parent="."]
+visible = false
+visibility_layer = 524288
+z_index = -1
+position = Vector2(1040, -10696)
+texture = ExtResource("6_gq2r2")
+metadata/_edit_lock_ = true
