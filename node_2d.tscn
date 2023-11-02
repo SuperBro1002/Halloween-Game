@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c8vsyntvaavkc"]
+[gd_scene load_steps=9 format=3 uid="uid://c8vsyntvaavkc"]
 
 [ext_resource type="PackedScene" uid="uid://wpeebgc64b58" path="res://player.tscn" id="1_pfrt1"]
 [ext_resource type="PackedScene" uid="uid://b85lne138o0ux" path="res://solidPlat.tscn" id="2_c1pie"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://crlj52c142iyd" path="res://fallPlat.tscn" id="4_tiv12"]
 [ext_resource type="Texture2D" uid="uid://b2g8372ug8w33" path="res://art/bg1.jpg" id="5_xy2e0"]
 [ext_resource type="Texture2D" uid="uid://lbl6h2qi8bdb" path="res://art/bg2.jpg" id="6_gq2r2"]
+[ext_resource type="PackedScene" uid="uid://c1sw45yqnxtkd" path="res://vertMovingPlat.tscn" id="7_5cfn0"]
+[ext_resource type="PackedScene" uid="uid://f70ba6hgdxal" path="res://horiMovingPlat.tscn" id="8_yyt8w"]
 
 [node name="Level-1" type="Node2D"]
 
@@ -54,3 +56,9 @@ position = Vector2(1672, 880)
 
 [node name="solidPlat3" parent="." instance=ExtResource("2_c1pie")]
 position = Vector2(1000, 888)
+
+[node name="movingPlat" parent="." instance=ExtResource("7_5cfn0")]
+position = Vector2(224, 344)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("8_yyt8w")]
+position = Vector2(760, 184)

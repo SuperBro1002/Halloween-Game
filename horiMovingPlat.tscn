@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://f70ba6hgdxal"]
+
+[ext_resource type="Script" path="res://horiMovingPlat.gd" id="1_vu3t0"]
+[ext_resource type="Texture2D" uid="uid://dnrqnpf50ur4m" path="res://art/Wooden_Plank_4.png" id="2_xm6ju"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_whgdu"]
+size = Vector2(384, 48)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+script = ExtResource("1_vu3t0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_xm6ju")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_whgdu")
