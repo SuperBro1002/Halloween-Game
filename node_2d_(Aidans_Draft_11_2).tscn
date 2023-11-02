@@ -1,0 +1,358 @@
+[gd_scene load_steps=7 format=3 uid="uid://dsqeryrcpju4u"]
+
+[ext_resource type="PackedScene" uid="uid://wpeebgc64b58" path="res://player.tscn" id="1_1ou36"]
+[ext_resource type="Texture2D" uid="uid://b2g8372ug8w33" path="res://art/bg1.jpg" id="2_d20ax"]
+[ext_resource type="Texture2D" uid="uid://lbl6h2qi8bdb" path="res://art/bg2.jpg" id="3_nh2e7"]
+[ext_resource type="PackedScene" uid="uid://crlj52c142iyd" path="res://fallPlat.tscn" id="4_bgjjx"]
+[ext_resource type="PackedScene" uid="uid://dfka6viqcea3" path="res://oneWayPlat.tscn" id="5_nse36"]
+[ext_resource type="PackedScene" uid="uid://b85lne138o0ux" path="res://solidPlat.tscn" id="6_404nw"]
+
+[node name="Level-1" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_1ou36")]
+z_index = 1
+position = Vector2(1047, 749)
+max_jump_count = 6
+double_jump = true
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+scale = Vector2(2, 2)
+zoom = Vector2(0.5, 0.5)
+limit_left = -210
+limit_right = 2290
+limit_bottom = 1024
+drag_vertical_enabled = true
+drag_bottom_margin = 0.4
+
+[node name="bg1" type="Sprite2D" parent="."]
+visibility_layer = 524288
+z_index = -1
+position = Vector2(1040, -2696)
+texture = ExtResource("2_d20ax")
+metadata/_edit_lock_ = true
+
+[node name="bg2" type="Sprite2D" parent="."]
+visibility_layer = 524288
+z_index = -1
+position = Vector2(1040, -10696)
+texture = ExtResource("3_nh2e7")
+metadata/_edit_lock_ = true
+
+[node name="fallPlat" parent="." instance=ExtResource("4_bgjjx")]
+position = Vector2(200, -2620)
+scale = Vector2(0.75, 1)
+
+[node name="fallPlat2" parent="." instance=ExtResource("4_bgjjx")]
+position = Vector2(1040, -3120)
+scale = Vector2(0.75, 1)
+
+[node name="fallPlat3" parent="." instance=ExtResource("4_bgjjx")]
+position = Vector2(1460, -3370)
+scale = Vector2(0.75, 1)
+
+[node name="fallPlat4" parent="." instance=ExtResource("4_bgjjx")]
+position = Vector2(1040, -5870)
+scale = Vector2(0.75, 1)
+
+[node name="fallPlat5" parent="." instance=ExtResource("4_bgjjx")]
+position = Vector2(1040, -6370)
+scale = Vector2(0.75, 1)
+
+[node name="fallPlat6" parent="." instance=ExtResource("4_bgjjx")]
+position = Vector2(1040, -6870)
+scale = Vector2(0.75, 1)
+
+[node name="fallPlat7" parent="." instance=ExtResource("4_bgjjx")]
+position = Vector2(620, -7120)
+scale = Vector2(0.75, 1)
+
+[node name="fallPlat8" parent="." instance=ExtResource("4_bgjjx")]
+position = Vector2(1460, -7120)
+scale = Vector2(0.75, 1)
+
+[node name="fallPlat9" parent="." instance=ExtResource("4_bgjjx")]
+position = Vector2(1040, -7370)
+scale = Vector2(0.75, 1)
+
+[node name="fallPlat10" parent="." instance=ExtResource("4_bgjjx")]
+position = Vector2(200, -8620)
+scale = Vector2(0.75, 1)
+
+[node name="fallPlat11" parent="." instance=ExtResource("4_bgjjx")]
+position = Vector2(620, -8870)
+scale = Vector2(0.75, 1)
+
+[node name="fallPlat12" parent="." instance=ExtResource("4_bgjjx")]
+position = Vector2(1880, -10870)
+scale = Vector2(0.75, 1)
+
+[node name="fallPlat13" parent="." instance=ExtResource("4_bgjjx")]
+position = Vector2(1460, -11120)
+scale = Vector2(0.75, 1)
+
+[node name="fallPlat14" parent="." instance=ExtResource("4_bgjjx")]
+position = Vector2(1040, -11370)
+scale = Vector2(0.75, 1)
+
+[node name="fallPlat16" parent="." instance=ExtResource("4_bgjjx")]
+position = Vector2(620, -11620)
+scale = Vector2(0.75, 1)
+
+[node name="fallPlat17" parent="." instance=ExtResource("4_bgjjx")]
+position = Vector2(200, -11620)
+scale = Vector2(0.75, 1)
+
+[node name="fallPlat18" parent="." instance=ExtResource("4_bgjjx")]
+position = Vector2(1460, -11620)
+scale = Vector2(0.75, 1)
+
+[node name="fallPlat19" parent="." instance=ExtResource("4_bgjjx")]
+position = Vector2(1880, -11620)
+scale = Vector2(0.75, 1)
+
+[node name="oneWayPlat" parent="." instance=ExtResource("5_nse36")]
+position = Vector2(200, 630)
+scale = Vector2(0.75, 1)
+
+[node name="oneWayPlat6" parent="." instance=ExtResource("5_nse36")]
+position = Vector2(620, 380)
+scale = Vector2(0.75, 1)
+
+[node name="oneWayPlat7" parent="." instance=ExtResource("5_nse36")]
+position = Vector2(200, 130)
+scale = Vector2(0.75, 1)
+
+[node name="oneWayPlat8" parent="." instance=ExtResource("5_nse36")]
+position = Vector2(620, -120)
+scale = Vector2(0.75, 1)
+
+[node name="oneWayPlat9" parent="." instance=ExtResource("5_nse36")]
+position = Vector2(1040, -370)
+scale = Vector2(0.75, 1)
+
+[node name="oneWayPlat2" parent="." instance=ExtResource("5_nse36")]
+position = Vector2(620, 630)
+scale = Vector2(0.75, 1)
+
+[node name="oneWayPlat3" parent="." instance=ExtResource("5_nse36")]
+position = Vector2(1040, 630)
+scale = Vector2(0.75, 1)
+
+[node name="oneWayPlat4" parent="." instance=ExtResource("5_nse36")]
+position = Vector2(1460, 630)
+scale = Vector2(0.75, 1)
+
+[node name="oneWayPlat5" parent="." instance=ExtResource("5_nse36")]
+position = Vector2(1880, 630)
+scale = Vector2(0.75, 1)
+
+[node name="oneWayPlat10" parent="." instance=ExtResource("5_nse36")]
+position = Vector2(1880, -620)
+scale = Vector2(0.75, 1)
+
+[node name="oneWayPlat11" parent="." instance=ExtResource("5_nse36")]
+position = Vector2(1880, -870)
+scale = Vector2(0.75, 1)
+
+[node name="oneWayPlat12" parent="." instance=ExtResource("5_nse36")]
+position = Vector2(1460, -1120)
+scale = Vector2(0.75, 1)
+
+[node name="oneWayPlat13" parent="." instance=ExtResource("5_nse36")]
+position = Vector2(1880, -1495)
+scale = Vector2(0.75, 1)
+
+[node name="oneWayPlat14" parent="." instance=ExtResource("5_nse36")]
+position = Vector2(1460, -1745)
+scale = Vector2(0.75, 1)
+
+[node name="oneWayPlat15" parent="." instance=ExtResource("5_nse36")]
+position = Vector2(1460, -2120)
+scale = Vector2(0.75, 1)
+
+[node name="oneWayPlat16" parent="." instance=ExtResource("5_nse36")]
+position = Vector2(620, -2370)
+scale = Vector2(0.75, 1)
+
+[node name="oneWayPlat17" parent="." instance=ExtResource("5_nse36")]
+position = Vector2(200, -2870)
+scale = Vector2(0.75, 1)
+
+[node name="oneWayPlat18" parent="." instance=ExtResource("5_nse36")]
+position = Vector2(1040, -3620)
+scale = Vector2(0.75, 1)
+
+[node name="oneWayPlat21" parent="." instance=ExtResource("5_nse36")]
+position = Vector2(200, -4370)
+scale = Vector2(0.75, 1)
+
+[node name="oneWayPlat23" parent="." instance=ExtResource("5_nse36")]
+position = Vector2(200, -5370)
+scale = Vector2(0.75, 1)
+
+[node name="oneWayPlat25" parent="." instance=ExtResource("5_nse36")]
+position = Vector2(620, -5620)
+scale = Vector2(0.75, 1)
+
+[node name="oneWayPlat29" parent="." instance=ExtResource("5_nse36")]
+position = Vector2(1880, -8620)
+scale = Vector2(0.75, 1)
+
+[node name="oneWayPlat30" parent="." instance=ExtResource("5_nse36")]
+position = Vector2(1460, -8870)
+scale = Vector2(0.75, 1)
+
+[node name="oneWayPlat31" parent="." instance=ExtResource("5_nse36")]
+position = Vector2(1880, -9120)
+scale = Vector2(0.75, 1)
+
+[node name="oneWayPlat32" parent="." instance=ExtResource("5_nse36")]
+position = Vector2(200, -9870)
+scale = Vector2(0.75, 1)
+
+[node name="oneWayPlat33" parent="." instance=ExtResource("5_nse36")]
+position = Vector2(200, -10120)
+scale = Vector2(0.75, 1)
+
+[node name="oneWayPlat34" parent="." instance=ExtResource("5_nse36")]
+position = Vector2(200, -10370)
+scale = Vector2(0.75, 1)
+
+[node name="oneWayPlat37" parent="." instance=ExtResource("5_nse36")]
+position = Vector2(620, -12620)
+scale = Vector2(0.75, 1)
+
+[node name="oneWayPlat38" parent="." instance=ExtResource("5_nse36")]
+position = Vector2(1460, -12620)
+scale = Vector2(0.75, 1)
+
+[node name="oneWayPlat26" parent="." instance=ExtResource("5_nse36")]
+position = Vector2(1460, -5620)
+scale = Vector2(0.75, 1)
+
+[node name="oneWayPlat24" parent="." instance=ExtResource("5_nse36")]
+position = Vector2(1880, -5370)
+scale = Vector2(0.75, 1)
+
+[node name="oneWayPlat19" parent="." instance=ExtResource("5_nse36")]
+position = Vector2(1460, -3870)
+rotation = 0.0872665
+scale = Vector2(0.75, 1)
+
+[node name="oneWayPlat20" parent="." instance=ExtResource("5_nse36")]
+position = Vector2(1040, -4120)
+rotation = 0.0872665
+scale = Vector2(0.75, 1)
+
+[node name="oneWayPlat22" parent="." instance=ExtResource("5_nse36")]
+position = Vector2(1040, -4745)
+rotation = 0.0872665
+scale = Vector2(0.75, 1)
+
+[node name="oneWayPlat27" parent="." instance=ExtResource("5_nse36")]
+position = Vector2(1040, -7995)
+rotation = 0.0872665
+scale = Vector2(0.75, 1)
+
+[node name="oneWayPlat28" parent="." instance=ExtResource("5_nse36")]
+position = Vector2(620, -8370)
+rotation = 0.0872665
+scale = Vector2(0.75, 1)
+
+[node name="oneWayPlat35" parent="." instance=ExtResource("5_nse36")]
+position = Vector2(620, -10620)
+rotation = 0.0872665
+scale = Vector2(0.75, 1)
+
+[node name="oneWayPlat36" parent="." instance=ExtResource("5_nse36")]
+position = Vector2(1040, -12120)
+rotation = 0.0872665
+scale = Vector2(0.75, 1)
+
+[node name="solidPlat0 (ground)" parent="." instance=ExtResource("6_404nw")]
+position = Vector2(1081, 880)
+scale = Vector2(10, 1)
+
+[node name="solidPlat" parent="." instance=ExtResource("6_404nw")]
+position = Vector2(1880, -1245)
+scale = Vector2(0.75, 1)
+
+[node name="solidPlat4" parent="." instance=ExtResource("6_404nw")]
+position = Vector2(1880, -1870)
+scale = Vector2(0.75, 1)
+
+[node name="solidPlat5" parent="." instance=ExtResource("6_404nw")]
+position = Vector2(200, -2120)
+scale = Vector2(0.75, 1)
+
+[node name="solidPlat6" parent="." instance=ExtResource("6_404nw")]
+position = Vector2(620, -5120)
+scale = Vector2(0.75, 1)
+
+[node name="solidPlat8" parent="." instance=ExtResource("6_404nw")]
+position = Vector2(620, -6120)
+scale = Vector2(0.75, 1)
+
+[node name="solidPlat10" parent="." instance=ExtResource("6_404nw")]
+position = Vector2(620, -6620)
+scale = Vector2(0.75, 1)
+
+[node name="solidPlat12" parent="." instance=ExtResource("6_404nw")]
+position = Vector2(620, -7620)
+scale = Vector2(0.75, 1)
+
+[node name="solidPlat17" parent="." instance=ExtResource("6_404nw")]
+position = Vector2(200, -12620)
+scale = Vector2(0.75, 1)
+
+[node name="solidPlat18" parent="." instance=ExtResource("6_404nw")]
+position = Vector2(1880, -12620)
+scale = Vector2(0.75, 1)
+
+[node name="solidPlat13" parent="." instance=ExtResource("6_404nw")]
+position = Vector2(1460, -7620)
+scale = Vector2(0.75, 1)
+
+[node name="solidPlat14" parent="." instance=ExtResource("6_404nw")]
+position = Vector2(1460, -8370)
+rotation = 0.0872665
+scale = Vector2(0.75, 1)
+
+[node name="solidPlat15" parent="." instance=ExtResource("6_404nw")]
+position = Vector2(620, -9370)
+rotation = 0.0872665
+scale = Vector2(0.75, 1)
+
+[node name="solidPlat16" parent="." instance=ExtResource("6_404nw")]
+position = Vector2(1040, -9620)
+rotation = 0.0872665
+scale = Vector2(0.75, 1)
+
+[node name="solidPlat11" parent="." instance=ExtResource("6_404nw")]
+position = Vector2(1460, -6620)
+scale = Vector2(0.75, 1)
+
+[node name="solidPlat9" parent="." instance=ExtResource("6_404nw")]
+position = Vector2(1460, -6120)
+scale = Vector2(0.75, 1)
+
+[node name="solidPlat7" parent="." instance=ExtResource("6_404nw")]
+position = Vector2(1460, -5120)
+scale = Vector2(0.75, 1)
+
+[node name="solidPlat2" parent="." instance=ExtResource("6_404nw")]
+position = Vector2(2442, 325)
+scale = Vector2(0.75, 1)
+
+[node name="solidPlat3" parent="." instance=ExtResource("6_404nw")]
+position = Vector2(2459, 492)
+scale = Vector2(0.75, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 975.0
+offset_top = -12881.0
+offset_right = 1214.0
+offset_bottom = -12799.0
+text = "End of Level 1
+End of Alpha Version"
+structured_text_bidi_override_options = [null]
