@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://crlj52c142iyd"]
 
-[ext_resource type="Texture2D" uid="uid://bvcjmhcueqg3g" path="res://art/Wood PlatForm.png" id="1_1jsfo"]
+[ext_resource type="Texture2D" uid="uid://b7thymlvf0yel" path="res://art/Stone_platform_Test.png" id="1_xudm0"]
 
 [sub_resource type="GDScript" id="GDScript_2okvt"]
 script/source = "extends StaticBody2D
@@ -17,7 +17,7 @@ func _process(delta):
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_is5ad"]
-size = Vector2(20, 3.5)
+size = Vector2(384, 83)
 
 [sub_resource type="GDScript" id="GDScript_5t4ru"]
 script/source = "extends CollisionShape2D
@@ -39,9 +39,9 @@ scale = Vector2(8, 8)
 script = SubResource("GDScript_2okvt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_1jsfo")
+texture = ExtResource("1_xudm0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 0.25)
+position = Vector2(1, -15.5)
 shape = SubResource("RectangleShape2D_is5ad")
 script = SubResource("GDScript_5t4ru")

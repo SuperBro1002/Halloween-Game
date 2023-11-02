@@ -1,16 +1,17 @@
 [gd_scene load_steps=3 format=3 uid="uid://b85lne138o0ux"]
 
-[ext_resource type="Texture2D" uid="uid://bfvso278iqsol" path="res://art/Bouncy Platform Long.png" id="1_in3ds"]
+[ext_resource type="Texture2D" uid="uid://by1bdqkrwosvx" path="res://art/Crumbling_Platform.png" id="1_kfl6l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ervui"]
-size = Vector2(304, 64)
+size = Vector2(384, 80)
 
 [node name="solidPlat" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -2.5034e-06)
 scale = Vector2(1, 1.12281)
-texture = ExtResource("1_in3ds")
+texture = ExtResource("1_kfl6l")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -24)
 shape = SubResource("RectangleShape2D_ervui")
