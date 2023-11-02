@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Halloween Game"
-run/main_scene="res://node_2d.tscn"
+run/main_scene="res://node_2d_(Aidans_Draft_11_2).tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1250
 
 [input]
 

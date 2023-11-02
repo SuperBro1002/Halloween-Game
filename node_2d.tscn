@@ -61,4 +61,3 @@ position = Vector2(1000, 888)
 position = Vector2(224, 344)
 
 [node name="StaticBody2D" parent="." instance=ExtResource("8_yyt8w")]
-position = Vector2(760, 184)
