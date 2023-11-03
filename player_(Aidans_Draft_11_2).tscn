@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://wpeebgc64b58"]
+
+[ext_resource type="Script" path="res://Area2D.gd" id="1_apr86"]
+[ext_resource type="Texture2D" uid="uid://d326lfthgranj" path="res://art/Reaper_Test.png" id="2_gsbyo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_arsxe"]
+size = Vector2(214, 248)
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(512, 296)
+scale = Vector2(0.5, 0.5)
+platform_on_leave = 1
+script = ExtResource("1_apr86")
+dashStep = 35
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.06667, 0.996894)
+texture = ExtResource("2_gsbyo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -8)
+shape = SubResource("RectangleShape2D_arsxe")
