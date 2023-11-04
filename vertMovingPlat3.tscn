@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdo34m5mnn5ag"]
+
+[ext_resource type="Script" path="res://vertMovingPlat.gd" id="1_wkjuw"]
+[ext_resource type="Texture2D" uid="uid://dnrqnpf50ur4m" path="res://art/Wooden_Plank_4.png" id="2_u6e6k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_goae6"]
+size = Vector2(382, 46)
+
+[node name="VerticalMovingPlat" type="AnimatableBody2D"]
+sync_to_physics = false
+script = ExtResource("1_wkjuw")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_u6e6k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_goae6")
+one_way_collision = true
+one_way_collision_margin = 10.0
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

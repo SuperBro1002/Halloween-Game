@@ -1,15 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://dsqeryrcpju4u"]
+[gd_scene load_steps=9 format=3 uid="uid://dsqeryrcpju4u"]
 
 [ext_resource type="PackedScene" uid="uid://wpeebgc64b58" path="res://player.tscn" id="1_1ou36"]
 [ext_resource type="Texture2D" uid="uid://dymsqwasreq46" path="res://art/background_lvl_1.png" id="2_fnaf2"]
 [ext_resource type="Texture2D" uid="uid://lbl6h2qi8bdb" path="res://art/bg2.jpg" id="3_nh2e7"]
 [ext_resource type="PackedScene" uid="uid://crlj52c142iyd" path="res://fallPlat.tscn" id="4_bgjjx"]
 [ext_resource type="PackedScene" uid="uid://dfka6viqcea3" path="res://oneWayPlat.tscn" id="5_nse36"]
-[ext_resource type="PackedScene" uid="uid://b85lne138o0ux" path="res://solidPlat.tscn" id="6_404nw"]
+[ext_resource type="PackedScene" uid="uid://b85lne138o0ux" path="res://solidPlat1.tscn" id="6_404nw"]
 [ext_resource type="PackedScene" uid="uid://f70ba6hgdxal" path="res://horiMovingPlat.tscn" id="7_b1ipe"]
 [ext_resource type="PackedScene" uid="uid://c1sw45yqnxtkd" path="res://vertMovingPlat.tscn" id="8_dksrm"]
-[ext_resource type="PackedScene" uid="uid://h21iq21syp40" path="res://onPumpkin.tscn" id="9_al744"]
-[ext_resource type="PackedScene" uid="uid://g8bqghy847qs" path="res://offPumpkin.tscn" id="10_it6xl"]
 
 [node name="Level-1" type="Node2D"]
 
@@ -353,12 +351,6 @@ scale = Vector2(0.75, 1)
 [node name="HorizontalMovingPlat" parent="." instance=ExtResource("7_b1ipe")]
 position = Vector2(1256, -3872)
 scale = Vector2(0.75, 1)
-
-[node name="Area2D" parent="." instance=ExtResource("9_al744")]
-position = Vector2(2888, 320)
-
-[node name="Area2D2" parent="." instance=ExtResource("10_it6xl")]
-position = Vector2(3168, 352)
 
 [node name="HorizontalMovingPlat2" parent="." instance=ExtResource("7_b1ipe")]
 position = Vector2(1032, -4120)
