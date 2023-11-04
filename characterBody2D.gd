@@ -28,7 +28,7 @@ func _process(delta):
 	flip_player()
 
 
-func movement(delta):
+func movement(_delta):
 	# Gravity
 	if !is_on_floor() and velocity.y < 1480 and dashActive == false:
 		velocity.y +=  gravity

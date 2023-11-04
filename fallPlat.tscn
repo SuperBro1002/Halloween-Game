@@ -12,18 +12,18 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 
-func _on_area_2d_body_entered(body):
+func _on_area_2d_body_entered(_body):
 	await get_tree().create_timer(0.5).timeout
 	hide()
 	#touching.emit()
 	$CollisionShape2D.set_deferred(\"disabled\", true)
 
 
-func _on_area_2d_body_exited(body):
+func _on_area_2d_body_exited(_body):
 	await get_tree().create_timer(3).timeout
 	show()
 	$CollisionShape2D.set_deferred(\"disabled\", false)
