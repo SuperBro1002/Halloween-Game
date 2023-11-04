@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://g8bqghy847qs"]
+
+[ext_resource type="Texture2D" uid="uid://cywmo5ckdjvax" path="res://art/Evil pump-1.png" id="1_cc6tq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_76csr"]
+radius = 96.0
+
+[node name="Area2D" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 3.14159
+texture = ExtResource("1_cc6tq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 32)
+shape = SubResource("CircleShape2D_76csr")

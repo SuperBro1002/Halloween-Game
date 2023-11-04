@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://crlj52c142iyd"]
 
-[ext_resource type="Texture2D" uid="uid://b7thymlvf0yel" path="res://art/Stone_platform_Test.png" id="1_xudm0"]
+[ext_resource type="Texture2D" uid="uid://by1bdqkrwosvx" path="res://art/Crumbling_Platform.png" id="1_tb3dx"]
 
 [sub_resource type="GDScript" id="GDScript_2okvt"]
 script/source = "extends StaticBody2D
@@ -30,7 +30,7 @@ func _on_area_2d_body_exited(body):
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_is5ad"]
-size = Vector2(384, 83)
+size = Vector2(384, 72)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_enq3v"]
 size = Vector2(382, 20)
@@ -40,10 +40,10 @@ scale = Vector2(8, 8)
 script = SubResource("GDScript_2okvt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_xudm0")
+texture = ExtResource("1_tb3dx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, -15.5)
+position = Vector2(1, -21)
 shape = SubResource("RectangleShape2D_is5ad")
 
 [node name="Area2D" type="Area2D" parent="."]

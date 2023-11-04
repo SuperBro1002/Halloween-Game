@@ -1,17 +1,16 @@
 [gd_scene load_steps=3 format=3 uid="uid://b85lne138o0ux"]
 
-[ext_resource type="Texture2D" uid="uid://by1bdqkrwosvx" path="res://art/Crumbling_Platform.png" id="1_kfl6l"]
+[ext_resource type="Texture2D" uid="uid://b7thymlvf0yel" path="res://art/Stone_platform_Test.png" id="1_3dg6p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ervui"]
-size = Vector2(384, 80)
+size = Vector2(384, 81)
 
 [node name="solidPlat" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -2.5034e-06)
-scale = Vector2(1, 1.12281)
-texture = ExtResource("1_kfl6l")
+texture = ExtResource("1_3dg6p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -24)
+position = Vector2(0, -16.5)
 shape = SubResource("RectangleShape2D_ervui")

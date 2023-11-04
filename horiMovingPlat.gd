@@ -1,30 +1,28 @@
-#extends StaticBody2D
-#
-#var speed = 1
-#var move = true
-#
-## Called when the node enters the scene tree for the first time.
-#func _ready():
-#	await get_tree().create_timer(2).timeout
-#	for n in 485:
-#		floatingLeft()
-#	for n in 85:
-#		floatingRight()
-#
-## Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(_delta):
-#	pass
-#
-#
-#func floatingLeft():
-#	speed = -1
-#	position.y += speed
-#
-#
-#func floatingRight():
-#	speed = 1
-#	position.x += speed
-##	if position.x >= 200:
-##		speed -= 1
-##	if position.x <= 0:
-##		speed += 1
+extends AnimatableBody2D
+@export_category("Platform Properties")
+@export var speed = 10
+@export var distance = 20
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	position.x -= 70
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta):
+	move()
+
+
+func move():
+	position.x += speed
+
+
+func _on_timer_timeout():
+	if speed < 0:
+		for n in distance:
+			await get_tree().create_timer(0.002).timeout
+			speed += 1
+	elif speed > 0:
+		for n in distance:
+			await get_tree().create_timer(0.002).timeout
+			speed -= 1

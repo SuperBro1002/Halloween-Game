@@ -6,12 +6,20 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_goae6"]
 size = Vector2(382, 46)
 
-[node name="movingPlat" type="StaticBody2D"]
+[node name="VerticalMovingPlat" type="AnimatableBody2D"]
+sync_to_physics = false
 script = ExtResource("1_tmo15")
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_xs2c8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_goae6")
+one_way_collision = true
 one_way_collision_margin = 10.0
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -6,9 +6,9 @@
 size = Vector2(383, 44)
 
 [node name="oneWayPlat" type="StaticBody2D"]
-scale = Vector2(8, 8)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1, 0.5)
 texture = ExtResource("1_sf0ei")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

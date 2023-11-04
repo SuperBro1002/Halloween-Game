@@ -9,6 +9,7 @@ extends CharacterBody2D
 @export var jump_count : int = 2
 @export var maxDashCount = 1
 @export var dashCount = 1
+@onready var player_sprite = $AnimatedSprite2D
 var direction
 var dashActive = false
 
@@ -24,11 +25,12 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	movement(delta)
+	flip_player()
 
 
 func movement(delta):
 	# Gravity
-	if !is_on_floor() and velocity.y < 880 and dashActive == false:
+	if !is_on_floor() and velocity.y < 1480 and dashActive == false:
 		velocity.y +=  gravity
 	elif is_on_floor():
 		dashCount = maxDashCount
@@ -81,3 +83,9 @@ func dash():
 	
 	dashActive = false
 
+
+func flip_player():
+	if velocity.x < 0: 
+		player_sprite.flip_h = true
+	elif velocity.x > 0:
+		player_sprite.flip_h = false
