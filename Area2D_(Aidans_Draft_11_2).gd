@@ -1,16 +1,17 @@
 extends CharacterBody2D
 
 @export_category("Player Properties")
-@export var moveSpeed = 490
+@export var moveSpeed = 590
 #AIDAN'S EDIT: Added midairMoveSpeed variable
 @export var midairMoveSpeed = 790 #IMPLEMENT
 @export var jumpForce = 1050
-@export var gravity = 60
+@export var gravity = 75
 @export var dashStep = 20
 @export var max_jump_count : int = 2
 @export var jump_count : int = 2
 @export var maxDashCount = 1
 @export var dashCount = 1
+@onready var player_sprite = $AnimatedSprite2D
 var direction
 var dashActive = false
 
@@ -30,7 +31,7 @@ func _process(delta):
 
 func movement(delta):
 	# Gravity
-	if !is_on_floor() and velocity.y < 880 and dashActive == false:
+	if !is_on_floor() and velocity.y < 1480 and dashActive == false:
 		velocity.y +=  gravity
 	elif is_on_floor():
 		dashCount = maxDashCount
@@ -90,3 +91,9 @@ func dash():
 	
 	dashActive = false
 
+
+func flip_player():
+	if velocity.x < 0: 
+		player_sprite.flip_h = true
+	elif velocity.x > 0:
+		player_sprite.flip_h = false

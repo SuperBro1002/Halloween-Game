@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dsqeryrcpju4u"]
+[gd_scene load_steps=9 format=3 uid="uid://dwtc0qqsxvnta"]
 
 [ext_resource type="PackedScene" uid="uid://wpeebgc64b58" path="res://player.tscn" id="1_1ou36"]
 [ext_resource type="Texture2D" uid="uid://dymsqwasreq46" path="res://art/background_lvl_1.png" id="2_fnaf2"]
