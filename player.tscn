@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://wpeebgc64b58"]
 
-[ext_resource type="Script" path="res://Area2D_(Aidans_Draft_11_2).gd" id="1_5x8n6"]
+[ext_resource type="Script" path="res://Area2D_(Aidans_Draft_11_4).gd" id="1_njxog"]
 [ext_resource type="Texture2D" uid="uid://d326lfthgranj" path="res://art/Reaper_Test.png" id="2_vovnq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_arsxe"]
@@ -14,8 +14,7 @@ position = Vector2(512, 296)
 scale = Vector2(0.5, 0.5)
 collision_layer = 3
 platform_on_leave = 1
-script = ExtResource("1_5x8n6")
-dashStep = 35
+script = ExtResource("1_njxog")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="Sprite2D" parent="."]

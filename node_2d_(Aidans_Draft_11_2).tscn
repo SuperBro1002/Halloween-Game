@@ -1,6 +1,5 @@
-[gd_scene load_steps=13 format=3 uid="uid://dwtc0qqsxvnta"]
+[gd_scene load_steps=12 format=3 uid="uid://dwtc0qqsxvnta"]
 
-[ext_resource type="PackedScene" uid="uid://wpeebgc64b58" path="res://playerold.tscn" id="1_1ou36"]
 [ext_resource type="Texture2D" uid="uid://dvdmmcc5hyqkm" path="res://art/LEVEL_1_BACKGROUND1111.jpg" id="2_y1q8h"]
 [ext_resource type="Texture2D" uid="uid://lbl6h2qi8bdb" path="res://art/bg2.jpg" id="3_nh2e7"]
 [ext_resource type="PackedScene" uid="uid://crlj52c142iyd" path="res://fallPlat.tscn" id="4_bgjjx"]
@@ -14,20 +13,6 @@
 [ext_resource type="PackedScene" uid="uid://dm3pt682bd65g" path="res://onPumpkin3.tscn" id="12_083us"]
 
 [node name="Level-1" type="Node2D"]
-
-[node name="Player" parent="." instance=ExtResource("1_1ou36")]
-z_index = 1
-position = Vector2(1047, 749)
-double_jump = true
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-scale = Vector2(2, 2)
-zoom = Vector2(0.5, 0.5)
-limit_left = -210
-limit_right = 2290
-limit_bottom = 1024
-drag_vertical_enabled = true
-drag_bottom_margin = 0.4
 
 [node name="bg1" type="Sprite2D" parent="."]
 visibility_layer = 524288

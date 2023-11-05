@@ -6,7 +6,7 @@ extends CharacterBody2D
 @export var midairMoveSpeed = 790 #IMPLEMENT
 @export var jumpForce = 1050
 @export var gravity = 75
-@export var dashStep = 20
+@export var dashStep = 35
 @export var max_jump_count : int = 2
 @export var jump_count : int = 2
 @export var maxDashCount = 1

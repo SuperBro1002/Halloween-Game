@@ -5,7 +5,7 @@ extends CharacterBody2D
 @export var midairMoveSpeed = 790
 @export var jumpForce = 1050
 @export var gravity = 75
-@export var dashStep = 20
+@export var dashStep = 35
 @export var max_jump_count : int = 2
 @export var jump_count : int = 2
 @export var maxDashCount = 1
@@ -13,6 +13,8 @@ extends CharacterBody2D
 @onready var player_sprite = $AnimatedSprite2D
 var direction
 var dashActive = false
+var burned = false
+var prevDirection
 
 @export_category("Toggle Functions") # Double jump feature is disable by default (Can be toggled from inspector)
 @export var double_jump : = false
@@ -26,7 +28,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	movement(delta)
-
+	flip_player()
 
 func movement(delta):
 	# Gravity
@@ -36,10 +38,11 @@ func movement(delta):
 		dashCount = maxDashCount
 		jump_count = max_jump_count
 	
-	handle_jumping()
-	handle_dashing()
+	if burned == false:
+		handle_jumping()
+		handle_dashing()
 	
-	if dashActive == false:
+	if dashActive == false and burned == false:
 		var inputAxis = Input.get_axis("Left", "Right")
 		if !is_on_floor():
 			velocity = Vector2(inputAxis * midairMoveSpeed, velocity.y)
@@ -73,7 +76,7 @@ func handle_dashing():
 
 
 func jump():
-	velocity.y = (-jumpForce) * 2.15
+	velocity.y = (-jumpForce) * 2.00
 	# AIDAN'S EDIT: Multiplied velocity.y by 2.15
 
 
@@ -94,3 +97,19 @@ func flip_player():
 		player_sprite.flip_h = true
 	elif velocity.x > 0:
 		player_sprite.flip_h = false
+
+
+func _on_area_2d_area_entered(area):
+	burned = true
+	prevDirection = get_last_motion().x
+	player_sprite.flip_v = true
+	if prevDirection > 0:
+		velocity = Vector2(-500,-1800)
+	elif prevDirection <= 0:
+		velocity = Vector2(500,-1800)
+
+
+func _on_area_2d_area_exited(area):
+	await get_tree().create_timer(1.5).timeout
+	player_sprite.flip_v = false
+	burned = false
