@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dwtc0qqsxvnta"]
+[gd_scene load_steps=23 format=3 uid="uid://dwtc0qqsxvnta"]
 
 [ext_resource type="PackedScene" uid="uid://wpeebgc64b58" path="res://player.tscn" id="1_1ou36"]
 [ext_resource type="Texture2D" uid="uid://dvdmmcc5hyqkm" path="res://art/LEVEL_1_BACKGROUND1111.jpg" id="2_umk1r"]
@@ -21,12 +21,13 @@
 [ext_resource type="PackedScene" uid="uid://yt62aco7t2o" path="res://solidPlat3.tscn" id="17_pf2au"]
 [ext_resource type="PackedScene" uid="uid://b8x5vs41q8i2v" path="res://horiMovingPlat2.tscn" id="20_557u5"]
 [ext_resource type="PackedScene" uid="uid://cjy47ey2bmpij" path="res://vertMovingPlat2.tscn" id="21_80stu"]
+[ext_resource type="PackedScene" uid="uid://bycc1t8tojks6" path="res://fakePlat2.tscn" id="22_8t3um"]
 
 [node name="Level-1" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_1ou36")]
 z_index = 1
-position = Vector2(192, -13552)
+position = Vector2(180, -13512)
 platform_on_leave = 2
 max_jump_count = 20
 jump_count = 20
@@ -138,43 +139,43 @@ position = Vector2(1880, -11620)
 scale = Vector2(0.75, 1)
 
 [node name="fallPlat_2_1" parent="." instance=ExtResource("5_yskdf")]
-position = Vector2(1880, -14870)
+position = Vector2(1880, -15488)
 scale = Vector2(0.75, 1)
 
 [node name="fallPlat_2_2" parent="." instance=ExtResource("5_yskdf")]
-position = Vector2(1880, -17120)
+position = Vector2(1880, -17738)
 scale = Vector2(0.75, 1)
 
 [node name="fallPlat_2_5" parent="." instance=ExtResource("5_yskdf")]
-position = Vector2(1670, -24870)
+position = Vector2(1670, -25488)
 scale = Vector2(0.75, 1)
 
 [node name="fallPlat_2_6" parent="." instance=ExtResource("5_yskdf")]
-position = Vector2(1040, -25120)
+position = Vector2(1040, -25738)
 scale = Vector2(0.75, 1)
 
 [node name="fallPlat_2_7" parent="." instance=ExtResource("5_yskdf")]
-position = Vector2(410, -25370)
+position = Vector2(410, -25988)
 scale = Vector2(0.75, 1)
 
 [node name="fallPlat_2_8" parent="." instance=ExtResource("5_yskdf")]
-position = Vector2(410, -25870)
+position = Vector2(410, -26488)
 scale = Vector2(0.75, 1)
 
 [node name="fallPlat_2_9" parent="." instance=ExtResource("5_yskdf")]
-position = Vector2(1040, -26120)
+position = Vector2(1040, -26738)
 scale = Vector2(0.75, 1)
 
 [node name="fallPlat_2_10" parent="." instance=ExtResource("5_yskdf")]
-position = Vector2(1670, -26370)
+position = Vector2(1670, -26988)
 scale = Vector2(0.75, 1)
 
 [node name="fallPlat_2_3" parent="." instance=ExtResource("5_yskdf")]
-position = Vector2(1460, -17370)
+position = Vector2(1460, -17988)
 scale = Vector2(0.75, 1)
 
 [node name="fallPlat_2_4" parent="." instance=ExtResource("5_yskdf")]
-position = Vector2(1880, -17620)
+position = Vector2(1880, -18238)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat" parent="." instance=ExtResource("5_nse36")]
@@ -341,192 +342,192 @@ position = Vector2(1460, -13870)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_5" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(574, -14856)
+position = Vector2(648, -15474)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_6" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(1201, -14880)
+position = Vector2(1201, -15498)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_7" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(1880, -15120)
+position = Vector2(1880, -15738)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_9" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(1040, -15370)
+position = Vector2(1040, -15988)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_11" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(1040, -15870)
+position = Vector2(1040, -16488)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_13" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(1460, -16370)
+position = Vector2(1460, -16988)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_12" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(1880, -16120)
+position = Vector2(1880, -16738)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_14" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(200, -16620)
+position = Vector2(200, -17238)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_15" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(620, -16870)
+position = Vector2(620, -17488)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_16" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(1040, -16870)
+position = Vector2(1040, -17488)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_17" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(1460, -16870)
+position = Vector2(1460, -17488)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_19" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(1880, -17870)
+position = Vector2(1880, -18488)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_21" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(620, -18745)
+position = Vector2(620, -19363)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_23" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(1816, -19245)
+position = Vector2(1816, -19863)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_25" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(200, -19620)
+position = Vector2(200, -20238)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_30" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(200, -22870)
+position = Vector2(200, -23488)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_31" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(620, -23120)
+position = Vector2(620, -23738)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_34" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(1460, -23745)
+position = Vector2(1460, -24363)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_35" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(200, -24120)
+position = Vector2(200, -24738)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_36" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(1040, -24370)
+position = Vector2(1040, -24988)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_37" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(1880, -24620)
+position = Vector2(1880, -25238)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_38" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(200, -25620)
+position = Vector2(200, -26238)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_39" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(1880, -26620)
+position = Vector2(1880, -27238)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_40" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(1880, -26870)
+position = Vector2(1880, -27488)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_41" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(1460, -27120)
+position = Vector2(1460, -27738)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_45" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(200, -27120)
+position = Vector2(200, -27738)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_46" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(1040, -28120)
+position = Vector2(1040, -28738)
 rotation = 0.0872665
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_43" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(1460, -27620)
+position = Vector2(1460, -28238)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_47" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(1460, -29120)
+position = Vector2(1460, -29738)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_48" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(1040, -29120)
+position = Vector2(1040, -29738)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_44" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(620, -27620)
+position = Vector2(620, -28238)
 rotation = 0.785398
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_42" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(1880, -27370)
+position = Vector2(1880, -27988)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_20" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(200, -18120)
+position = Vector2(200, -18738)
 rotation = 0.0872665
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_22" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(1460, -18870)
+position = Vector2(1460, -19488)
 rotation = 0.0872665
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_24" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(1040, -19370)
+position = Vector2(1040, -19988)
 rotation = 0.0872665
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_26" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(620, -19995)
+position = Vector2(620, -20613)
 rotation = 0.0872665
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_27" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(1460, -20695)
+position = Vector2(1460, -21313)
 rotation = 0.0872665
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_28" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(620, -21520)
+position = Vector2(620, -22138)
 rotation = 0.0872665
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_29" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(1460, -22095)
+position = Vector2(1460, -22713)
 rotation = 0.0872665
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_32" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(620, -23370)
+position = Vector2(620, -23988)
 rotation = 0.0872665
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_33" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(1460, -23370)
+position = Vector2(1460, -23988)
 rotation = 0.0872665
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_8" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(1460, -15370)
+position = Vector2(1460, -15988)
 rotation = 0.785398
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_10" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(1040, -15620)
+position = Vector2(1040, -16238)
 rotation = 0.785398
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_18" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(1060, -17620)
+position = Vector2(1060, -18238)
 rotation = 0.785398
 scale = Vector2(0.75, 1)
 
@@ -611,27 +612,27 @@ position = Vector2(200, -13120)
 scale = Vector2(0.75, 1)
 
 [node name="solidPlat_2_5" parent="." instance=ExtResource("9_077q0")]
-position = Vector2(1880, -15620)
+position = Vector2(1880, -16238)
 scale = Vector2(0.75, 1)
 
 [node name="solidPlat_2_6" parent="." instance=ExtResource("9_077q0")]
-position = Vector2(620, -16370)
+position = Vector2(620, -16988)
 scale = Vector2(0.75, 1)
 
 [node name="solidPlat_2_7" parent="." instance=ExtResource("9_077q0")]
-position = Vector2(620, -17620)
+position = Vector2(620, -18238)
 scale = Vector2(0.75, 1)
 
 [node name="solidPlat_2_8" parent="." instance=ExtResource("9_077q0")]
-position = Vector2(620, -22620)
+position = Vector2(620, -23238)
 scale = Vector2(0.75, 1)
 
 [node name="solidPlat_2_10" parent="." instance=ExtResource("9_077q0")]
-position = Vector2(620, -23870)
+position = Vector2(620, -24488)
 scale = Vector2(0.75, 1)
 
 [node name="solidPlat_2_9" parent="." instance=ExtResource("9_077q0")]
-position = Vector2(930, -23495)
+position = Vector2(930, -24113)
 rotation = 0.0872665
 scale = Vector2(0.75, 1)
 
@@ -646,18 +647,18 @@ structured_text_bidi_override_options = [null]
 
 [node name="Label2" type="Label" parent="."]
 offset_left = 324.0
-offset_top = -29380.0
+offset_top = -29998.0
 offset_right = 563.0
-offset_bottom = -29298.0
+offset_bottom = -29916.0
 text = "End of Level 2
 Player Gets Midair Jump Here"
 structured_text_bidi_override_options = [null]
 
 [node name="Label3" type="Label" parent="."]
 offset_left = 922.0
-offset_top = -46462.0
+offset_top = -47080.0
 offset_right = 1161.0
-offset_bottom = -46380.0
+offset_bottom = -46998.0
 text = "End of Level 3
 Game Complete!
 Segue to Ending Atop Tower"
@@ -712,486 +713,486 @@ position = Vector2(776, -10592)
 scale = Vector2(0.75, 1)
 
 [node name="onPumpkin_2_1" parent="." instance=ExtResource("12_jqh3j")]
-position = Vector2(1038, -17020)
+position = Vector2(1038, -17638)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_2_2" parent="." instance=ExtResource("12_jqh3j")]
-position = Vector2(620, -18170)
+position = Vector2(620, -18788)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_2_3" parent="." instance=ExtResource("12_jqh3j")]
-position = Vector2(620, -18470)
+position = Vector2(620, -19088)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_2_4" parent="." instance=ExtResource("12_jqh3j")]
-position = Vector2(1700, -19054)
+position = Vector2(1700, -19672)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_2_5" parent="." instance=ExtResource("12_jqh3j")]
-position = Vector2(1040, -19520)
+position = Vector2(1040, -20138)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_2_6" parent="." instance=ExtResource("12_jqh3j")]
-position = Vector2(500, -19520)
+position = Vector2(500, -20138)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_2_7" parent="." instance=ExtResource("12_jqh3j")]
-position = Vector2(520, -20750)
+position = Vector2(520, -21368)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_2_8" parent="." instance=ExtResource("12_jqh3j")]
-position = Vector2(720, -20750)
+position = Vector2(720, -21368)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_2_11" parent="." instance=ExtResource("12_jqh3j")]
-position = Vector2(520, -22225)
+position = Vector2(520, -22843)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_2_13" parent="." instance=ExtResource("12_jqh3j")]
-position = Vector2(1360, -23100)
+position = Vector2(1360, -23718)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_2_18" parent="." instance=ExtResource("12_jqh3j")]
-position = Vector2(1040, -27670)
+position = Vector2(1040, -28288)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_2_22" parent="." instance=ExtResource("12_jqh3j")]
-position = Vector2(830, -28270)
+position = Vector2(830, -28888)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_2_19" parent="." instance=ExtResource("12_jqh3j")]
-position = Vector2(1040, -27420)
+position = Vector2(1040, -28038)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_2_20" parent="." instance=ExtResource("12_jqh3j")]
-position = Vector2(1040, -27170)
+position = Vector2(1040, -27788)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_2_21" parent="." instance=ExtResource("12_jqh3j")]
-position = Vector2(1040, -26920)
+position = Vector2(1040, -27538)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_2_16" parent="." instance=ExtResource("12_jqh3j")]
-position = Vector2(1355, -25720)
+position = Vector2(1355, -26338)
 rotation = 0.261799
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_2_17" parent="." instance=ExtResource("12_jqh3j")]
-position = Vector2(725, -25520)
+position = Vector2(725, -26138)
 rotation = 0.261799
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_2_15" parent="." instance=ExtResource("12_jqh3j")]
-position = Vector2(1460, -24515)
+position = Vector2(1460, -25133)
 rotation = 0.261799
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_2_14" parent="." instance=ExtResource("12_jqh3j")]
-position = Vector2(1560, -23100)
+position = Vector2(1560, -23718)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_2_12" parent="." instance=ExtResource("12_jqh3j")]
-position = Vector2(720, -22225)
+position = Vector2(720, -22843)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_2_9" parent="." instance=ExtResource("12_jqh3j")]
-position = Vector2(1360, -21400)
+position = Vector2(1360, -22018)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_2_10" parent="." instance=ExtResource("12_jqh3j")]
-position = Vector2(1560, -21400)
+position = Vector2(1560, -22018)
 scale = Vector2(0.9, 0.9)
 
 [node name="IcePlat" parent="." instance=ExtResource("13_um443")]
-position = Vector2(620, -29120)
+position = Vector2(620, -29738)
 scale = Vector2(0.75, 1)
 
 [node name="IcePlat2" parent="." instance=ExtResource("13_um443")]
-position = Vector2(200, -29120)
+position = Vector2(200, -29738)
 scale = Vector2(0.75, 1)
 
 [node name="IcePlat3" parent="." instance=ExtResource("13_um443")]
-position = Vector2(1040, -32870)
+position = Vector2(1040, -33488)
 scale = Vector2(0.75, 1)
 
 [node name="IcePlat4" parent="." instance=ExtResource("13_um443")]
-position = Vector2(1460, -33120)
+position = Vector2(1460, -33738)
 scale = Vector2(0.75, 1)
 
 [node name="IcePlat5" parent="." instance=ExtResource("13_um443")]
-position = Vector2(1570, -35370)
+position = Vector2(1570, -35988)
 scale = Vector2(0.75, 1)
 
 [node name="IcePlat6" parent="." instance=ExtResource("13_um443")]
-position = Vector2(1860, -35370)
+position = Vector2(1860, -35988)
 scale = Vector2(0.75, 1)
 
 [node name="IcePlat7" parent="." instance=ExtResource("13_um443")]
-position = Vector2(1040, -38270)
+position = Vector2(1040, -38888)
 scale = Vector2(0.75, 1)
 
 [node name="IcePlat8" parent="." instance=ExtResource("13_um443")]
-position = Vector2(200, -39020)
+position = Vector2(200, -39638)
 scale = Vector2(0.75, 1)
 
 [node name="IcePlat10" parent="." instance=ExtResource("13_um443")]
-position = Vector2(620, -40120)
+position = Vector2(620, -40738)
 scale = Vector2(0.75, 1)
 
 [node name="IcePlat11" parent="." instance=ExtResource("13_um443")]
-position = Vector2(1040, -40120)
+position = Vector2(1040, -40738)
 scale = Vector2(0.75, 1)
 
 [node name="IcePlat14" parent="." instance=ExtResource("13_um443")]
-position = Vector2(1460, -42620)
+position = Vector2(1460, -43238)
 scale = Vector2(0.75, 1)
 
 [node name="IcePlat15" parent="." instance=ExtResource("13_um443")]
-position = Vector2(1650, -44620)
+position = Vector2(1650, -45238)
 scale = Vector2(0.75, 1)
 
 [node name="IcePlat17" parent="." instance=ExtResource("13_um443")]
-position = Vector2(1650, -45120)
+position = Vector2(1650, -45738)
 scale = Vector2(0.75, 1)
 
 [node name="IcePlat16" parent="." instance=ExtResource("13_um443")]
-position = Vector2(430, -44870)
+position = Vector2(430, -45488)
 scale = Vector2(0.75, 1)
 
 [node name="IcePlat12" parent="." instance=ExtResource("13_um443")]
-position = Vector2(1460, -40120)
+position = Vector2(1460, -40738)
 scale = Vector2(0.75, 1)
 
 [node name="IcePlat13" parent="." instance=ExtResource("13_um443")]
-position = Vector2(1880, -40120)
+position = Vector2(1880, -40738)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_3_1" parent="." instance=ExtResource("14_2m4j7")]
-position = Vector2(200, -29620)
+position = Vector2(200, -30238)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_3_2" parent="." instance=ExtResource("14_2m4j7")]
-position = Vector2(620, -30120)
+position = Vector2(620, -30738)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_3_3" parent="." instance=ExtResource("14_2m4j7")]
-position = Vector2(1040, -30620)
+position = Vector2(1040, -31238)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_3_7" parent="." instance=ExtResource("14_2m4j7")]
-position = Vector2(1040, -31620)
+position = Vector2(1040, -32238)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_3_8" parent="." instance=ExtResource("14_2m4j7")]
-position = Vector2(200, -32620)
+position = Vector2(200, -33238)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_3_12" parent="." instance=ExtResource("14_2m4j7")]
-position = Vector2(1860, -35745)
+position = Vector2(1860, -36363)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_3_13" parent="." instance=ExtResource("14_2m4j7")]
-position = Vector2(1860, -36245)
+position = Vector2(1860, -36863)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_3_15" parent="." instance=ExtResource("14_2m4j7")]
-position = Vector2(1860, -36620)
+position = Vector2(1860, -37238)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_3_18" parent="." instance=ExtResource("14_2m4j7")]
-position = Vector2(1880, -38120)
+position = Vector2(1880, -38738)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_3_19" parent="." instance=ExtResource("14_2m4j7")]
-position = Vector2(1880, -39770)
+position = Vector2(1880, -40388)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_3_24" parent="." instance=ExtResource("14_2m4j7")]
-position = Vector2(200, -46120)
+position = Vector2(200, -46738)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_3_25" parent="." instance=ExtResource("14_2m4j7")]
-position = Vector2(620, -46120)
+position = Vector2(620, -46738)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_3_26" parent="." instance=ExtResource("14_2m4j7")]
-position = Vector2(1040, -46120)
+position = Vector2(1040, -46738)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_3_27" parent="." instance=ExtResource("14_2m4j7")]
-position = Vector2(1460, -46120)
+position = Vector2(1460, -46738)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_3_28" parent="." instance=ExtResource("14_2m4j7")]
-position = Vector2(1880, -46120)
+position = Vector2(1880, -46738)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_3_17" parent="." instance=ExtResource("14_2m4j7")]
-position = Vector2(200, -37270)
+position = Vector2(200, -37888)
 rotation = 0.0872665
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_3_20" parent="." instance=ExtResource("14_2m4j7")]
-position = Vector2(1040, -40620)
+position = Vector2(1040, -41238)
 rotation = 0.0872665
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_3_22" parent="." instance=ExtResource("14_2m4j7")]
-position = Vector2(1460, -42870)
+position = Vector2(1460, -43488)
 rotation = 0.0872665
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_3_16" parent="." instance=ExtResource("14_2m4j7")]
-position = Vector2(620, -36620)
+position = Vector2(620, -37238)
 rotation = 0.785398
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_3_21" parent="." instance=ExtResource("14_2m4j7")]
-position = Vector2(1040, -42370)
+position = Vector2(1040, -42988)
 rotation = 0.785398
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_3_23" parent="." instance=ExtResource("14_2m4j7")]
-position = Vector2(2140, -45620)
+position = Vector2(2140, -46238)
 rotation = 0.785398
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_3_14" parent="." instance=ExtResource("14_2m4j7")]
-position = Vector2(1860, -35995)
+position = Vector2(1860, -36613)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_3_9" parent="." instance=ExtResource("14_2m4j7")]
-position = Vector2(1040, -33620)
+position = Vector2(1040, -34238)
 rotation = 0.0872665
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_3_10" parent="." instance=ExtResource("14_2m4j7")]
-position = Vector2(1460, -34120)
+position = Vector2(1460, -34738)
 rotation = 0.0872665
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_3_11" parent="." instance=ExtResource("14_2m4j7")]
-position = Vector2(620, -35120)
+position = Vector2(620, -35738)
 rotation = 0.0872665
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_3_4" parent="." instance=ExtResource("14_2m4j7")]
-position = Vector2(620, -30620)
+position = Vector2(620, -31238)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_3_5" parent="." instance=ExtResource("14_2m4j7")]
-position = Vector2(1460, -30620)
+position = Vector2(1460, -31238)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_3_6" parent="." instance=ExtResource("14_2m4j7")]
-position = Vector2(1880, -31120)
+position = Vector2(1880, -31738)
 scale = Vector2(0.75, 1)
 
 [node name="onPumpkin_3_1" parent="." instance=ExtResource("15_b786a")]
-position = Vector2(1040, -30770)
+position = Vector2(1040, -31388)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_3_2" parent="." instance=ExtResource("15_b786a")]
-position = Vector2(1040, -31020)
+position = Vector2(1040, -31638)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_3_3" parent="." instance=ExtResource("15_b786a")]
-position = Vector2(1650, -31270)
+position = Vector2(1650, -31888)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_3_4" parent="." instance=ExtResource("15_b786a")]
-position = Vector2(1650, -31520)
+position = Vector2(1650, -32138)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_3_5" parent="." instance=ExtResource("15_b786a")]
-position = Vector2(720, -34770)
+position = Vector2(720, -35388)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_3_6" parent="." instance=ExtResource("15_b786a")]
-position = Vector2(1980, -35545)
+position = Vector2(1980, -36163)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_3_7" parent="." instance=ExtResource("15_b786a")]
-position = Vector2(1860, -37120)
+position = Vector2(1860, -37738)
 rotation = 0.261799
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_3_12" parent="." instance=ExtResource("15_b786a")]
-position = Vector2(2200, -40270)
+position = Vector2(2200, -40888)
 rotation = 0.261799
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_3_13" parent="." instance=ExtResource("15_b786a")]
-position = Vector2(320, -40270)
+position = Vector2(320, -40888)
 rotation = 0.261799
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_3_25" parent="." instance=ExtResource("15_b786a")]
-position = Vector2(1040, -44120)
+position = Vector2(1040, -44738)
 rotation = 0.261799
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_3_8" parent="." instance=ExtResource("15_b786a")]
-position = Vector2(1590, -37995)
+position = Vector2(1590, -38613)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_3_9" parent="." instance=ExtResource("15_b786a")]
-position = Vector2(1290, -38300)
+position = Vector2(1290, -38918)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_3_10" parent="." instance=ExtResource("15_b786a")]
-position = Vector2(790, -38300)
+position = Vector2(790, -38918)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_3_11" parent="." instance=ExtResource("15_b786a")]
-position = Vector2(450, -39200)
+position = Vector2(450, -39818)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_3_14" parent="." instance=ExtResource("15_b786a")]
-position = Vector2(1250, -40300)
+position = Vector2(1250, -40918)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_3_17" parent="." instance=ExtResource("15_b786a")]
-position = Vector2(1670, -40300)
+position = Vector2(1670, -40918)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_3_15" parent="." instance=ExtResource("15_b786a")]
-position = Vector2(830, -40300)
+position = Vector2(830, -40918)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_3_16" parent="." instance=ExtResource("15_b786a")]
-position = Vector2(525, -42050)
+position = Vector2(525, -42668)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_3_18" parent="." instance=ExtResource("15_b786a")]
-position = Vector2(725, -42050)
+position = Vector2(725, -42668)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_3_19" parent="." instance=ExtResource("15_b786a")]
-position = Vector2(725, -42300)
+position = Vector2(725, -42918)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_3_21" parent="." instance=ExtResource("15_b786a")]
-position = Vector2(725, -42550)
+position = Vector2(725, -43168)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_3_23" parent="." instance=ExtResource("15_b786a")]
-position = Vector2(725, -42800)
+position = Vector2(725, -43418)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_3_26" parent="." instance=ExtResource("15_b786a")]
-position = Vector2(1900, -44770)
+position = Vector2(1900, -45388)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_3_28" parent="." instance=ExtResource("15_b786a")]
-position = Vector2(1900, -45270)
+position = Vector2(1900, -45888)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_3_27" parent="." instance=ExtResource("15_b786a")]
-position = Vector2(180, -45020)
+position = Vector2(180, -45638)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_3_24" parent="." instance=ExtResource("15_b786a")]
-position = Vector2(525, -42800)
+position = Vector2(525, -43418)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_3_22" parent="." instance=ExtResource("15_b786a")]
-position = Vector2(525, -42550)
+position = Vector2(525, -43168)
 scale = Vector2(0.9, 0.9)
 
 [node name="onPumpkin_3_20" parent="." instance=ExtResource("15_b786a")]
-position = Vector2(525, -42300)
+position = Vector2(525, -42918)
 scale = Vector2(0.9, 0.9)
 
 [node name="offPumpkin" parent="." instance=ExtResource("16_jt8ge")]
-position = Vector2(520, -35895)
+position = Vector2(520, -36513)
 scale = Vector2(0.9, 0.9)
 
 [node name="offPumpkin2" parent="." instance=ExtResource("16_jt8ge")]
-position = Vector2(720, -35895)
+position = Vector2(720, -36513)
 scale = Vector2(0.9, 0.9)
 
 [node name="offPumpkin3" parent="." instance=ExtResource("16_jt8ge")]
-position = Vector2(720, -36145)
+position = Vector2(720, -36763)
 scale = Vector2(0.9, 0.9)
 
 [node name="offPumpkin4" parent="." instance=ExtResource("16_jt8ge")]
-position = Vector2(520, -36145)
+position = Vector2(520, -36763)
 scale = Vector2(0.9, 0.9)
 
 [node name="offPumpkin5" parent="." instance=ExtResource("16_jt8ge")]
-position = Vector2(520, -36395)
+position = Vector2(520, -37013)
 scale = Vector2(0.9, 0.9)
 
 [node name="offPumpkin6" parent="." instance=ExtResource("16_jt8ge")]
-position = Vector2(720, -36395)
+position = Vector2(720, -37013)
 scale = Vector2(0.9, 0.9)
 
 [node name="offPumpkin7" parent="." instance=ExtResource("16_jt8ge")]
-position = Vector2(780, -37720)
+position = Vector2(780, -38338)
 scale = Vector2(0.9, 0.9)
 
 [node name="offPumpkin8" parent="." instance=ExtResource("16_jt8ge")]
-position = Vector2(1300, -37720)
+position = Vector2(1300, -38338)
 scale = Vector2(0.9, 0.9)
 
 [node name="offPumpkin9" parent="." instance=ExtResource("16_jt8ge")]
-position = Vector2(1480, -38395)
+position = Vector2(1480, -39013)
 scale = Vector2(0.9, 0.9)
 
 [node name="offPumpkin10" parent="." instance=ExtResource("16_jt8ge")]
-position = Vector2(600, -38395)
+position = Vector2(600, -39013)
 scale = Vector2(0.9, 0.9)
 
 [node name="solidPlat_3_1" parent="." instance=ExtResource("17_pf2au")]
-position = Vector2(200, -36870)
+position = Vector2(200, -37488)
 scale = Vector2(0.75, 1)
 
 [node name="solidPlat_3_2" parent="." instance=ExtResource("17_pf2au")]
-position = Vector2(200, -38520)
+position = Vector2(200, -39138)
 scale = Vector2(0.75, 1)
 
 [node name="solidPlat_3_3" parent="." instance=ExtResource("17_pf2au")]
-position = Vector2(430, -45620)
+position = Vector2(430, -46238)
 scale = Vector2(0.75, 1)
 
 [node name="fallPlat_3_1" parent="." instance=ExtResource("16_ti0n3")]
-position = Vector2(620, -32120)
+position = Vector2(620, -32738)
 scale = Vector2(0.75, 1)
 
 [node name="fallPlat_3_2" parent="." instance=ExtResource("16_ti0n3")]
-position = Vector2(1040, -37720)
+position = Vector2(1040, -38338)
 scale = Vector2(0.75, 1)
 
 [node name="fallPlat_3_3" parent="." instance=ExtResource("16_ti0n3")]
-position = Vector2(1040, -39270)
+position = Vector2(1040, -39888)
 scale = Vector2(0.75, 1)
 
 [node name="fallPlat_3_4" parent="." instance=ExtResource("16_ti0n3")]
-position = Vector2(1460, -39520)
+position = Vector2(1460, -40138)
 scale = Vector2(0.75, 1)
 
 [node name="fallPlat_3_5" parent="." instance=ExtResource("16_ti0n3")]
-position = Vector2(1460, -41620)
+position = Vector2(1460, -42238)
 scale = Vector2(0.75, 1)
 
 [node name="fallPlat_3_6" parent="." instance=ExtResource("16_ti0n3")]
-position = Vector2(1880, -41870)
+position = Vector2(1880, -42488)
 scale = Vector2(0.75, 1)
 
 [node name="fallPlat_3_7" parent="." instance=ExtResource("16_ti0n3")]
-position = Vector2(1460, -42120)
+position = Vector2(1460, -42738)
 scale = Vector2(0.75, 1)
 
 [node name="fallPlat_3_8" parent="." instance=ExtResource("16_ti0n3")]
-position = Vector2(1040, -43120)
+position = Vector2(1040, -43738)
 scale = Vector2(0.75, 1)
 
 [node name="Area2D" parent="." instance=ExtResource("15_b786a")]
-position = Vector2(1344, 384)
+position = Vector2(2962, 200)
 
 [node name="StaticBody2D" parent="." instance=ExtResource("16_jt8ge")]
-position = Vector2(1342, 408)
+position = Vector2(2960, 224)
 
 [node name="HorizontalMovingPlat9" parent="." instance=ExtResource("20_557u5")]
 position = Vector2(504, -13600)
@@ -1200,7 +1201,10 @@ position = Vector2(504, -13600)
 position = Vector2(1848, -14296)
 
 [node name="VerticalMovingPlat5" parent="." instance=ExtResource("21_80stu")]
-position = Vector2(224, -14536)
+position = Vector2(224, -15064)
 
 [node name="HorizontalMovingPlat10" parent="." instance=ExtResource("20_557u5")]
-position = Vector2(768, -14384)
+position = Vector2(768, -14504)
+
+[node name="fakePlat" parent="." instance=ExtResource("22_8t3um")]
+position = Vector2(656, -13888)

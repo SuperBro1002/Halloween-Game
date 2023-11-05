@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://wpeebgc64b58"]
+[gd_scene load_steps=6 format=3 uid="uid://wpeebgc64b58"]
 
 [ext_resource type="Script" path="res://Area2D_(Aidans_Draft_11_4).gd" id="1_njxog"]
 [ext_resource type="Texture2D" uid="uid://d326lfthgranj" path="res://art/Reaper_Test.png" id="2_vovnq"]
@@ -7,6 +7,9 @@
 size = Vector2(214, 248)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7co73"]
+size = Vector2(214, 248)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qux18"]
 size = Vector2(214, 248)
 
 [node name="Player" type="CharacterBody2D"]
@@ -32,5 +35,14 @@ collision_mask = 4
 position = Vector2(-1, -8)
 shape = SubResource("RectangleShape2D_7co73")
 
+[node name="Area2D2" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(-1, -8)
+shape = SubResource("RectangleShape2D_qux18")
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="area_entered" from="Area2D2" to="." method="_on_area_2d_2_area_entered"]

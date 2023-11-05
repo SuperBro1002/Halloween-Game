@@ -14,6 +14,7 @@ extends CharacterBody2D
 var direction
 var dashActive = false
 var burned = false
+var freeFall = false
 var prevDirection
 
 @export_category("Toggle Functions") # Double jump feature is disable by default (Can be toggled from inspector)
@@ -26,7 +27,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _physics_process(delta):
 	movement(delta)
 	flip_player()
 
@@ -38,11 +39,11 @@ func movement(delta):
 		dashCount = maxDashCount
 		jump_count = max_jump_count
 	
-	if burned == false:
+	if burned == false and freeFall == false:
 		handle_jumping()
 		handle_dashing()
 	
-	if dashActive == false and burned == false:
+	if dashActive == false and burned == false and freeFall == false:
 		var inputAxis = Input.get_axis("Left", "Right")
 		if !is_on_floor():
 			velocity = Vector2(inputAxis * midairMoveSpeed, velocity.y)
@@ -113,3 +114,12 @@ func _on_area_2d_area_exited(area):
 	await get_tree().create_timer(1.5).timeout
 	player_sprite.flip_v = false
 	burned = false
+
+
+func _on_area_2d_2_area_entered(area):
+	freeFall = true
+	player_sprite.flip_v = true
+	velocity = Vector2(0,600)
+	await get_tree().create_timer(1.5).timeout
+	freeFall = false
+	player_sprite.flip_v = false
