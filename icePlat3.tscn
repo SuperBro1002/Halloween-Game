@@ -1,11 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://djtvcfwq4i1ws"]
+[gd_scene load_steps=5 format=3 uid="uid://djtvcfwq4i1ws"]
 
 [ext_resource type="Texture2D" uid="uid://b7thymlvf0yel" path="res://art/Stone_platform_Test.png" id="1_bnq2i"]
+[ext_resource type="Script" path="res://icePlat3.gd" id="1_g3bqy"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_01kkk"]
+friction = 0.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bby3l"]
 size = Vector2(383, 84)
 
 [node name="Node2D" type="StaticBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_01kkk")
+script = ExtResource("1_g3bqy")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, 14.8772)

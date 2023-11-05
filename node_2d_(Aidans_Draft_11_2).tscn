@@ -1,20 +1,23 @@
-[gd_scene load_steps=9 format=3 uid="uid://dwtc0qqsxvnta"]
+[gd_scene load_steps=13 format=3 uid="uid://dwtc0qqsxvnta"]
 
-[ext_resource type="PackedScene" uid="uid://wpeebgc64b58" path="res://player.tscn" id="1_1ou36"]
-[ext_resource type="Texture2D" uid="uid://dymsqwasreq46" path="res://art/background_lvl_1.png" id="2_fnaf2"]
+[ext_resource type="PackedScene" uid="uid://wpeebgc64b58" path="res://playerold.tscn" id="1_1ou36"]
+[ext_resource type="Texture2D" uid="uid://dvdmmcc5hyqkm" path="res://art/LEVEL_1_BACKGROUND1111.jpg" id="2_y1q8h"]
 [ext_resource type="Texture2D" uid="uid://lbl6h2qi8bdb" path="res://art/bg2.jpg" id="3_nh2e7"]
 [ext_resource type="PackedScene" uid="uid://crlj52c142iyd" path="res://fallPlat.tscn" id="4_bgjjx"]
 [ext_resource type="PackedScene" uid="uid://dfka6viqcea3" path="res://oneWayPlat.tscn" id="5_nse36"]
 [ext_resource type="PackedScene" uid="uid://b85lne138o0ux" path="res://solidPlat1.tscn" id="6_404nw"]
 [ext_resource type="PackedScene" uid="uid://f70ba6hgdxal" path="res://horiMovingPlat.tscn" id="7_b1ipe"]
 [ext_resource type="PackedScene" uid="uid://c1sw45yqnxtkd" path="res://vertMovingPlat.tscn" id="8_dksrm"]
+[ext_resource type="PackedScene" uid="uid://djtvcfwq4i1ws" path="res://icePlat3.tscn" id="9_o8ye1"]
+[ext_resource type="PackedScene" uid="uid://h21iq21syp40" path="res://onPumpkin2.tscn" id="10_0ex6n"]
+[ext_resource type="PackedScene" uid="uid://g8bqghy847qs" path="res://offPumpkin.tscn" id="11_fa3lx"]
+[ext_resource type="PackedScene" uid="uid://dm3pt682bd65g" path="res://onPumpkin3.tscn" id="12_083us"]
 
 [node name="Level-1" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_1ou36")]
 z_index = 1
 position = Vector2(1047, 749)
-maxDashCount = 0
 double_jump = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -30,7 +33,7 @@ drag_bottom_margin = 0.4
 visibility_layer = 524288
 z_index = -1
 position = Vector2(1040, -2696)
-texture = ExtResource("2_fnaf2")
+texture = ExtResource("2_y1q8h")
 metadata/_edit_lock_ = true
 
 [node name="bg2" type="Sprite2D" parent="."]
@@ -395,3 +398,15 @@ scale = Vector2(0.75, 1)
 [node name="oneWayPlat20" parent="." instance=ExtResource("5_nse36")]
 position = Vector2(1488, -472)
 scale = Vector2(0.75, 1)
+
+[node name="Node2D" parent="." instance=ExtResource("9_o8ye1")]
+position = Vector2(1432, 456)
+
+[node name="Area2D" parent="." instance=ExtResource("10_0ex6n")]
+position = Vector2(1816, 408)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("11_fa3lx")]
+position = Vector2(1048, 280)
+
+[node name="Area2D2" parent="." instance=ExtResource("12_083us")]
+position = Vector2(1448, 176)

@@ -1,16 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://g8bqghy847qs"]
+[gd_scene load_steps=4 format=3 uid="uid://g8bqghy847qs"]
 
-[ext_resource type="Texture2D" uid="uid://cywmo5ckdjvax" path="res://art/Evil pump-1.png" id="1_cc6tq"]
+[ext_resource type="Texture2D" uid="uid://yc4xfs3io3wo" path="res://art/pumpkin unlit.png" id="1_13axl"]
+[ext_resource type="Script" path="res://offPumpkin.gd" id="1_wetqx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_76csr"]
-radius = 96.0
+radius = 104.307
 
-[node name="Area2D" type="Area2D"]
+[node name="StaticBody2D" type="StaticBody2D"]
+script = ExtResource("1_wetqx")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-rotation = 3.14159
-texture = ExtResource("1_cc6tq")
+texture = ExtResource("1_13axl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 32)
+position = Vector2(0, 8)
 shape = SubResource("CircleShape2D_76csr")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
