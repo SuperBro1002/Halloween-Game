@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dwtc0qqsxvnta"]
+[gd_scene load_steps=22 format=3 uid="uid://dwtc0qqsxvnta"]
 
 [ext_resource type="PackedScene" uid="uid://wpeebgc64b58" path="res://player.tscn" id="1_1ou36"]
 [ext_resource type="Texture2D" uid="uid://dvdmmcc5hyqkm" path="res://art/LEVEL_1_BACKGROUND1111.jpg" id="2_umk1r"]
@@ -19,14 +19,17 @@
 [ext_resource type="PackedScene" uid="uid://g8bqghy847qs" path="res://offPumpkin.tscn" id="16_jt8ge"]
 [ext_resource type="PackedScene" uid="uid://da8divwaq1s7i" path="res://fallPlat3.tscn" id="16_ti0n3"]
 [ext_resource type="PackedScene" uid="uid://yt62aco7t2o" path="res://solidPlat3.tscn" id="17_pf2au"]
+[ext_resource type="PackedScene" uid="uid://b8x5vs41q8i2v" path="res://horiMovingPlat2.tscn" id="20_557u5"]
+[ext_resource type="PackedScene" uid="uid://cjy47ey2bmpij" path="res://vertMovingPlat2.tscn" id="21_80stu"]
 
 [node name="Level-1" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_1ou36")]
 z_index = 1
-position = Vector2(1054, 742)
-max_jump_count = 8
-jump_count = 8
+position = Vector2(192, -13552)
+platform_on_leave = 2
+max_jump_count = 20
+jump_count = 20
 double_jump = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -55,10 +58,12 @@ metadata/_edit_lock_ = true
 [node name="bg3" type="Sprite2D" parent="."]
 position = Vector2(1040, -10696)
 texture = ExtResource("3_bpwb8")
+metadata/_edit_lock_ = true
 
 [node name="bg4" type="Sprite2D" parent="."]
 position = Vector2(1040, -18696)
 texture = ExtResource("4_8ihfh")
+metadata/_edit_lock_ = true
 
 [node name="fallPlat" parent="." instance=ExtResource("4_bgjjx")]
 position = Vector2(200, -2620)
@@ -336,11 +341,11 @@ position = Vector2(1460, -13870)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_5" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(620, -14620)
+position = Vector2(574, -14856)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_6" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(1040, -14870)
+position = Vector2(1201, -14880)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_7" parent="." instance=ExtResource("7_haw4c")]
@@ -630,21 +635,6 @@ position = Vector2(930, -23495)
 rotation = 0.0872665
 scale = Vector2(0.75, 1)
 
-[node name="solidPlat_2_2" parent="." instance=ExtResource("9_077q0")]
-position = Vector2(620, -13620)
-rotation = 0.0872665
-scale = Vector2(0.75, 1)
-
-[node name="solidPlat_2_3" parent="." instance=ExtResource("9_077q0")]
-position = Vector2(1880, -14245)
-rotation = 0.0872665
-scale = Vector2(0.75, 1)
-
-[node name="solidPlat_2_4" parent="." instance=ExtResource("9_077q0")]
-position = Vector2(200, -14370)
-rotation = 0.0872665
-scale = Vector2(0.75, 1)
-
 [node name="Label" type="Label" parent="."]
 offset_left = 950.0
 offset_top = -12834.0
@@ -694,7 +684,7 @@ position = Vector2(1056, -4896)
 scale = Vector2(0.75, 1)
 
 [node name="VerticalMovingPlat3" parent="." instance=ExtResource("8_dksrm")]
-position = Vector2(1032, -8104)
+position = Vector2(1032, -8152)
 scale = Vector2(0.75, 1)
 
 [node name="HorizontalMovingPlat3" parent="." instance=ExtResource("7_b1ipe")]
@@ -1196,3 +1186,21 @@ scale = Vector2(0.75, 1)
 [node name="fallPlat_3_8" parent="." instance=ExtResource("16_ti0n3")]
 position = Vector2(1040, -43120)
 scale = Vector2(0.75, 1)
+
+[node name="Area2D" parent="." instance=ExtResource("15_b786a")]
+position = Vector2(1344, 384)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("16_jt8ge")]
+position = Vector2(1342, 408)
+
+[node name="HorizontalMovingPlat9" parent="." instance=ExtResource("20_557u5")]
+position = Vector2(504, -13600)
+
+[node name="VerticalMovingPlat4" parent="." instance=ExtResource("21_80stu")]
+position = Vector2(1848, -14296)
+
+[node name="VerticalMovingPlat5" parent="." instance=ExtResource("21_80stu")]
+position = Vector2(224, -14536)
+
+[node name="HorizontalMovingPlat10" parent="." instance=ExtResource("20_557u5")]
+position = Vector2(768, -14384)

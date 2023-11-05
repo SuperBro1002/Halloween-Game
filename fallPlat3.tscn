@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://da8divwaq1s7i"]
 
-[ext_resource type="Texture2D" uid="uid://by1bdqkrwosvx" path="res://art/Crumbling_Platform.png" id="1_ags62"]
+[ext_resource type="Texture2D" uid="uid://ci44jvjx6nwc4" path="res://art/LEVEL 3 ASSETS/crumble stone 1.png" id="1_5k3qf"]
 
 [sub_resource type="GDScript" id="GDScript_2okvt"]
 script/source = "extends StaticBody2D
@@ -40,7 +40,8 @@ scale = Vector2(8, 8)
 script = SubResource("GDScript_2okvt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_ags62")
+position = Vector2(0.875, -13.125)
+texture = ExtResource("1_5k3qf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, -21)

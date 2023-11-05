@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6ulgjto0lrhr"
-path="res://.godot/imported/Wood_PlatForm1111.png-2291fa54d347c9a3828a6f451b1bfc8c.ctex"
+uid="uid://d4d1jairgnm8x"
+path="res://.godot/imported/pumpkin unlit.png-80ddb1330acb0e91e9f173c50c3900f1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Wood_PlatForm1111.png"
-dest_files=["res://.godot/imported/Wood_PlatForm1111.png-2291fa54d347c9a3828a6f451b1bfc8c.ctex"]
+source_file="res://art/LEVEL 3 ASSETS/pumpkin unlit.png"
+dest_files=["res://.godot/imported/pumpkin unlit.png-80ddb1330acb0e91e9f173c50c3900f1.ctex"]
 
 [params]
 

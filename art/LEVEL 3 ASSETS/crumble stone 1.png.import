@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2g8372ug8w33"
-path="res://.godot/imported/bg1.jpg-35029b5c6bc7918396c0fa4deb8a635e.ctex"
+uid="uid://ci44jvjx6nwc4"
+path="res://.godot/imported/crumble stone 1.png-a174ed3af31bd6bfe478d46629c2017f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/bg1.jpg"
-dest_files=["res://.godot/imported/bg1.jpg-35029b5c6bc7918396c0fa4deb8a635e.ctex"]
+source_file="res://art/LEVEL 3 ASSETS/crumble stone 1.png"
+dest_files=["res://.godot/imported/crumble stone 1.png-a174ed3af31bd6bfe478d46629c2017f.ctex"]
 
 [params]
 

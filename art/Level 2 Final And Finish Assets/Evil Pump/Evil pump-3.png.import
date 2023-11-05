@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bi0us44yb2hfd"
-path="res://.godot/imported/Woodlmao.png-41a0e7b88b4759e412d6b545e3f4d95c.ctex"
+uid="uid://codpoe2bei7tn"
+path="res://.godot/imported/Evil pump-3.png-874fb2e8e0b11957b55ff4f7077ebd2b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Woodlmao.png"
-dest_files=["res://.godot/imported/Woodlmao.png-41a0e7b88b4759e412d6b545e3f4d95c.ctex"]
+source_file="res://art/Level 2 Final And Finish Assets/Evil Pump/Evil pump-3.png"
+dest_files=["res://.godot/imported/Evil pump-3.png-874fb2e8e0b11957b55ff4f7077ebd2b.ctex"]
 
 [params]
 

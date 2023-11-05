@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://be8asp38gqicu"
-path="res://.godot/imported/Stone Platform.png-84c017cd6b8c5bdde04103efc94863d8.ctex"
+uid="uid://cvie10iqnd6r7"
+path="res://.godot/imported/Tower with eye Prt 3.png-e014f127ee6273cfc3f5fe7e9f45c006.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Stone Platform.png"
-dest_files=["res://.godot/imported/Stone Platform.png-84c017cd6b8c5bdde04103efc94863d8.ctex"]
+source_file="res://art/Level 2 Final And Finish Assets/Tower with eye Prt 3.png"
+dest_files=["res://.godot/imported/Tower with eye Prt 3.png-e014f127ee6273cfc3f5fe7e9f45c006.ctex"]
 
 [params]
 

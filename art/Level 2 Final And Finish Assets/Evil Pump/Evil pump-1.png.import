@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pgtmqvv10k6u"
-path="res://.godot/imported/Player_Idle.png-8ef5432289fa532f50fe5e8e5d177d96.ctex"
+uid="uid://c8fudqmfh6vp"
+path="res://.godot/imported/Evil pump-1.png-bdd039410fd3a3214963ae9dc851c2f0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Player_Idle.png"
-dest_files=["res://.godot/imported/Player_Idle.png-8ef5432289fa532f50fe5e8e5d177d96.ctex"]
+source_file="res://art/Level 2 Final And Finish Assets/Evil Pump/Evil pump-1.png"
+dest_files=["res://.godot/imported/Evil pump-1.png-bdd039410fd3a3214963ae9dc851c2f0.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://uwkk6k6wwbdg"
-path="res://.godot/imported/LEVEL_1_BACKGROUND_UNSHADED2222.jpg-6775e930ba0704d2b193974f2c94b6a4.ctex"
+uid="uid://fhlkvi03ufnl"
+path="res://.godot/imported/Stone Breaking-4.png-dc753da775ee720f8afe7d68d59a620d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/LEVEL_1_BACKGROUND_UNSHADED2222.jpg"
-dest_files=["res://.godot/imported/LEVEL_1_BACKGROUND_UNSHADED2222.jpg-6775e930ba0704d2b193974f2c94b6a4.ctex"]
+source_file="res://art/Level 2 Final And Finish Assets/Stone crumbling animation all/Stone Breaking-4.png"
+dest_files=["res://.godot/imported/Stone Breaking-4.png-dc753da775ee720f8afe7d68d59a620d.ctex"]
 
 [params]
 

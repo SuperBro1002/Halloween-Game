@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://yt62aco7t2o"]
 
-[ext_resource type="Texture2D" uid="uid://b7thymlvf0yel" path="res://art/Stone_platform_Test.png" id="1_048ed"]
+[ext_resource type="Texture2D" uid="uid://dqj2rpx0q8m6l" path="res://art/LEVEL 3 ASSETS/Stone platform.png" id="1_f7820"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ervui"]
 size = Vector2(384, 81)
@@ -8,8 +8,8 @@ size = Vector2(384, 81)
 [node name="solidPlat" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -2.5034e-06)
-texture = ExtResource("1_048ed")
+position = Vector2(0, -13)
+texture = ExtResource("1_f7820")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -16.5)

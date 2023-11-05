@@ -1,12 +1,12 @@
 [gd_scene load_steps=6 format=3 uid="uid://bda0xww52661n"]
 
 [ext_resource type="Script" path="res://horiMovingPlat.gd" id="1_wuox6"]
-[ext_resource type="Texture2D" uid="uid://dnrqnpf50ur4m" path="res://art/Wooden_Plank_4.png" id="2_c6qcc"]
+[ext_resource type="Texture2D" uid="uid://blq4b845i624p" path="res://art/LEVEL 3 ASSETS/wooden platform.png" id="2_q3qld"]
 [ext_resource type="Texture2D" uid="uid://b7thymlvf0yel" path="res://art/Stone_platform_Test.png" id="3_0jx4n"]
 [ext_resource type="Script" path="res://MovementRange.gd" id="4_56v5v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_whgdu"]
-size = Vector2(384, 48)
+size = Vector2(384, 40)
 
 [node name="HorizontalMovingPlat" type="AnimatableBody2D"]
 sync_to_physics = false
@@ -14,7 +14,7 @@ script = ExtResource("1_wuox6")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_c6qcc")
+texture = ExtResource("2_q3qld")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_whgdu")

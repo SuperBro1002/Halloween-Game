@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfvso278iqsol"
-path="res://.godot/imported/Bouncy Platform Long.png-36049433072ebc26f79f92dc09e9371f.ctex"
+uid="uid://bb6nkrx3o4f7c"
+path="res://.godot/imported/Stone Breaking-2.png-ae59d8b804ad2577feecdb3759f42ad5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Bouncy Platform Long.png"
-dest_files=["res://.godot/imported/Bouncy Platform Long.png-36049433072ebc26f79f92dc09e9371f.ctex"]
+source_file="res://art/Level 2 Final And Finish Assets/Stone crumbling animation all/Stone Breaking-2.png"
+dest_files=["res://.godot/imported/Stone Breaking-2.png-ae59d8b804ad2577feecdb3759f42ad5.ctex"]
 
 [params]
 

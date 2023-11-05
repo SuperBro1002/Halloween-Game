@@ -1,22 +1,24 @@
 [gd_scene load_steps=6 format=3 uid="uid://b8x5vs41q8i2v"]
 
 [ext_resource type="Script" path="res://horiMovingPlat.gd" id="1_4dhd6"]
-[ext_resource type="Texture2D" uid="uid://dnrqnpf50ur4m" path="res://art/Wooden_Plank_4.png" id="2_xantn"]
+[ext_resource type="Texture2D" uid="uid://dunl4rlhopy2g" path="res://art/Level 2 Final And Finish Assets/Wood.png" id="2_48t5w"]
 [ext_resource type="Texture2D" uid="uid://b7thymlvf0yel" path="res://art/Stone_platform_Test.png" id="3_xpylq"]
 [ext_resource type="Script" path="res://MovementRange.gd" id="4_v5c7q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_whgdu"]
-size = Vector2(384, 48)
+size = Vector2(384, 40)
 
 [node name="HorizontalMovingPlat" type="AnimatableBody2D"]
+scale = Vector2(0.75, 1)
 sync_to_physics = false
 script = ExtResource("1_4dhd6")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_xantn")
+texture = ExtResource("2_48t5w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_whgdu")
 one_way_collision = true
 one_way_collision_margin = 10.0

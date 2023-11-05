@@ -1,18 +1,18 @@
 [gd_scene load_steps=3 format=3 uid="uid://dam5lr8xabk1h"]
 
-[ext_resource type="Texture2D" uid="uid://dnrqnpf50ur4m" path="res://art/Wooden_Plank_4.png" id="1_jjsco"]
+[ext_resource type="Texture2D" uid="uid://blq4b845i624p" path="res://art/LEVEL 3 ASSETS/wooden platform.png" id="1_7kdp4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_goae6"]
-size = Vector2(383, 44)
+size = Vector2(383, 21)
 
 [node name="oneWayPlat" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(1, 0.5)
-texture = ExtResource("1_jjsco")
+texture = ExtResource("1_7kdp4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 0)
+position = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_goae6")
 one_way_collision = true
 one_way_collision_margin = 10.0

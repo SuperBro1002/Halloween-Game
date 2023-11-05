@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://djtvcfwq4i1ws"]
 
-[ext_resource type="Texture2D" uid="uid://b7thymlvf0yel" path="res://art/Stone_platform_Test.png" id="1_bnq2i"]
 [ext_resource type="Script" path="res://icePlat3.gd" id="1_g3bqy"]
+[ext_resource type="Texture2D" uid="uid://bdue4kyns8754" path="res://art/LEVEL 3 ASSETS/ice platform.png" id="2_ajali"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_01kkk"]
 friction = 0.0
@@ -14,9 +14,9 @@ physics_material_override = SubResource("PhysicsMaterial_01kkk")
 script = ExtResource("1_g3bqy")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, 14.8772)
+position = Vector2(0, 1)
 scale = Vector2(1, 0.982456)
-texture = ExtResource("1_bnq2i")
+texture = ExtResource("2_ajali")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, -0.122818)
