@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://h21iq21syp40"]
+[gd_scene load_steps=4 format=3 uid="uid://d8ws8k03bivq"]
 
-[ext_resource type="Script" path="res://onPumpkin2.gd" id="1_tughi"]
-[ext_resource type="Texture2D" uid="uid://cywmo5ckdjvax" path="res://art/Evil pump-1.png" id="1_v13cs"]
+[ext_resource type="Texture2D" uid="uid://cywmo5ckdjvax" path="res://art/Evil pump-1.png" id="1_7kbra"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_76csr"]
 radius = 96.0
@@ -11,10 +10,9 @@ radius = 64.0
 
 [node name="Area2D" type="Area2D"]
 collision_layer = 5
-script = ExtResource("1_tughi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_v13cs")
+texture = ExtResource("1_7kbra")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 32)
@@ -23,5 +21,3 @@ shape = SubResource("CircleShape2D_76csr")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2(0, -64)
 shape = SubResource("CircleShape2D_5ymqf")
-
-[node name="Timer" type="Timer" parent="."]

@@ -1,5 +1,7 @@
 extends Area2D
-
+@export_category("Pumpkin Properties")
+@export var switch = false
+@export var vert = false
 var state = 1
 
 # Called when the node enters the scene tree for the first time.
@@ -15,13 +17,14 @@ func _process(delta):
 
 
 func _on_timer_timeout():
-	if state == 1:
-		hide()
-		$CollisionShape2D.set_deferred("disabled", true)
-		$CollisionShape2D2.set_deferred("disabled", true)
-		state = 0
-	else:
-		show()
-		$CollisionShape2D.set_deferred("disabled", false)
-		$CollisionShape2D2.set_deferred("disabled", false)
-		state = 1
+	if switch == true:
+		if state == 1:
+			hide()
+			$CollisionShape2D.set_deferred("disabled", true)
+			$CollisionShape2D2.set_deferred("disabled", true)
+			state = 0
+		else:
+			show()
+			$CollisionShape2D.set_deferred("disabled", false)
+			$CollisionShape2D2.set_deferred("disabled", false)
+			state = 1
