@@ -1,7 +1,6 @@
 extends Area2D
 @export_category("Pumpkin Properties")
 @export var switch = false
-@export var vert = false
 var state = 1
 
 # Called when the node enters the scene tree for the first time.

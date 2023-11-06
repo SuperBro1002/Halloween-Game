@@ -1,6 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bycc1t8tojks6"]
+[gd_scene load_steps=9 format=3 uid="uid://bycc1t8tojks6"]
 
-[ext_resource type="Texture2D" uid="uid://d2epfgsuy6srv" path="res://art/Level 2 Final And Finish Assets/Stone crumbling animation all/Stone Breaking-1.png" id="1_khucl"]
+[ext_resource type="Texture2D" uid="uid://dliga5631wl83" path="res://art/Level 2 Final And Finish Assets/Stone Breaking 75/Stone Breaking 75-1.png" id="1_lqhc7"]
+[ext_resource type="Texture2D" uid="uid://dh3l1uqpuynxm" path="res://art/Level 2 Final And Finish Assets/Stone Breaking 75/Stone Breaking 75-2.png" id="2_lqpvk"]
+[ext_resource type="Texture2D" uid="uid://y0yhbgah0gy1" path="res://art/Level 2 Final And Finish Assets/Stone Breaking 75/Stone Breaking 75-3.png" id="3_jcia6"]
+[ext_resource type="Texture2D" uid="uid://c7h1ap5krc1km" path="res://art/Level 2 Final And Finish Assets/Stone Breaking 75/Stone Breaking 75-4.png" id="4_22g07"]
 
 [sub_resource type="GDScript" id="GDScript_2okvt"]
 script/source = "extends StaticBody2D
@@ -17,8 +20,31 @@ func _process(_delta):
 
 
 func _on_area_2d_area_entered(area):
+	$sprite.play()
+	$sprite.animation = \"Collapse\"
+	await get_tree().create_timer(0.2).timeout
 	queue_free()
 "
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pl7cw"]
+animations = [{
+"frames": [{
+"duration": 0.2,
+"texture": ExtResource("1_lqhc7")
+}, {
+"duration": 0.2,
+"texture": ExtResource("2_lqpvk")
+}, {
+"duration": 0.2,
+"texture": ExtResource("3_jcia6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_22g07")
+}],
+"loop": false,
+"name": &"Collapse",
+"speed": 4.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_is5ad"]
 size = Vector2(384, 72)
@@ -30,9 +56,10 @@ size = Vector2(378, 4.375)
 scale = Vector2(0.75, 1)
 script = SubResource("GDScript_2okvt")
 
-[node name="sprite" type="Sprite2D" parent="."]
+[node name="sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, 31)
-texture = ExtResource("1_khucl")
+sprite_frames = SubResource("SpriteFrames_pl7cw")
+animation = &"Collapse"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, -21)

@@ -1,10 +1,11 @@
-[gd_scene load_steps=26 format=3 uid="uid://dwtc0qqsxvnta"]
+[gd_scene load_steps=30 format=3 uid="uid://dwtc0qqsxvnta"]
 
 [ext_resource type="PackedScene" uid="uid://wpeebgc64b58" path="res://player.tscn" id="1_1ou36"]
 [ext_resource type="Texture2D" uid="uid://dvdmmcc5hyqkm" path="res://art/LEVEL_1_BACKGROUND1111.jpg" id="2_umk1r"]
 [ext_resource type="Texture2D" uid="uid://dy3xiq3ubki8t" path="res://art/background_lvl_2.png" id="3_bpwb8"]
 [ext_resource type="Texture2D" uid="uid://cx27r2d4hu8j8" path="res://art/background_lvl_3.png" id="4_8ihfh"]
 [ext_resource type="PackedScene" uid="uid://crlj52c142iyd" path="res://fallPlat.tscn" id="4_bgjjx"]
+[ext_resource type="Texture2D" uid="uid://fkjsvu6o3g33" path="res://art/Test3.png" id="5_bpwkt"]
 [ext_resource type="PackedScene" uid="uid://dfka6viqcea3" path="res://oneWayPlat.tscn" id="5_nse36"]
 [ext_resource type="PackedScene" uid="uid://1t80otj3ie32" path="res://fallPlat2.tscn" id="5_yskdf"]
 [ext_resource type="PackedScene" uid="uid://b85lne138o0ux" path="res://solidPlat1.tscn" id="6_404nw"]
@@ -25,12 +26,15 @@
 [ext_resource type="PackedScene" uid="uid://bdo34m5mnn5ag" path="res://vertMovingPlat3.tscn" id="23_2eb1g"]
 [ext_resource type="PackedScene" uid="uid://rd83smhsg2rb" path="res://fakePlat3.tscn" id="24_41dm7"]
 [ext_resource type="PackedScene" uid="uid://bda0xww52661n" path="res://horiMovingPlat3.tscn" id="25_e7o61"]
+[ext_resource type="PackedScene" uid="uid://bd2ttxguuw0l2" path="res://movePumpkin3.tscn" id="26_86te5"]
+[ext_resource type="PackedScene" uid="uid://6v8iv3tm8jk2" path="res://movePumpkin2.tscn" id="27_jhuyr"]
+[ext_resource type="PackedScene" uid="uid://b2lqafcskb03a" path="res://Wall.tscn" id="28_pgtsl"]
 
 [node name="Level-1" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_1ou36")]
 z_index = 1
-position = Vector2(1376, -13377)
+position = Vector2(1080, -38016)
 platform_on_leave = 2
 max_jump_count = 20
 jump_count = 20
@@ -76,7 +80,7 @@ metadata/_edit_lock_ = true
 
 [node name="bg5" type="Sprite2D" parent="."]
 position = Vector2(1040, -33640)
-texture = ExtResource("4_8ihfh")
+texture = ExtResource("5_bpwkt")
 metadata/_edit_lock_ = true
 
 [node name="fallPlat" parent="." instance=ExtResource("4_bgjjx")]
@@ -180,7 +184,7 @@ position = Vector2(1040, -27370)
 scale = Vector2(0.75, 1)
 
 [node name="fallPlat_2_10" parent="." instance=ExtResource("5_yskdf")]
-position = Vector2(1579, -27592)
+position = Vector2(1632, -27592)
 scale = Vector2(0.75, 1)
 
 [node name="fallPlat_2_3" parent="." instance=ExtResource("5_yskdf")]
@@ -344,11 +348,11 @@ position = Vector2(1880, -15982)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_9" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(978, -16424)
+position = Vector2(978, -16472)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_10" parent="." instance=ExtResource("7_haw4c")]
-position = Vector2(1480, -16176)
+position = Vector2(1480, -16192)
 scale = Vector2(0.75, 1)
 
 [node name="oneWayPlat_2_11" parent="." instance=ExtResource("7_haw4c")]
@@ -700,21 +704,6 @@ scale = Vector2(0.9, 0.9)
 position = Vector2(1040, -28170)
 scale = Vector2(0.9, 0.9)
 
-[node name="onPumpkin_2_16" parent="." instance=ExtResource("12_jqh3j")]
-position = Vector2(1355, -26970)
-rotation = 0.261799
-scale = Vector2(0.9, 0.9)
-
-[node name="onPumpkin_2_17" parent="." instance=ExtResource("12_jqh3j")]
-position = Vector2(725, -26770)
-rotation = 0.261799
-scale = Vector2(0.9, 0.9)
-
-[node name="onPumpkin_2_15" parent="." instance=ExtResource("12_jqh3j")]
-position = Vector2(1460, -25693)
-rotation = 0.261799
-scale = Vector2(0.9, 0.9)
-
 [node name="onPumpkin_2_14" parent="." instance=ExtResource("12_jqh3j")]
 position = Vector2(1560, -23824)
 scale = Vector2(0.9, 0.9)
@@ -906,21 +895,6 @@ scale = Vector2(0.9, 0.9)
 position = Vector2(1872, -36883)
 scale = Vector2(0.9, 0.9)
 
-[node name="onPumpkin_3_7" parent="." instance=ExtResource("15_b786a")]
-position = Vector2(1860, -38458)
-rotation = 0.261799
-scale = Vector2(0.9, 0.9)
-
-[node name="onPumpkin_3_12" parent="." instance=ExtResource("15_b786a")]
-position = Vector2(2200, -41608)
-rotation = 0.261799
-scale = Vector2(0.9, 0.9)
-
-[node name="onPumpkin_3_25" parent="." instance=ExtResource("15_b786a")]
-position = Vector2(1040, -45458)
-rotation = 0.261799
-scale = Vector2(0.9, 0.9)
-
 [node name="onPumpkin_3_9" parent="." instance=ExtResource("15_b786a")]
 position = Vector2(1290, -39638)
 scale = Vector2(0.9, 0.9)
@@ -1097,7 +1071,7 @@ position = Vector2(1072, -35040)
 position = Vector2(624, -37936)
 
 [node name="VerticalMovingPlat12" parent="." instance=ExtResource("23_2eb1g")]
-position = Vector2(224, -38800)
+position = Vector2(192, -39024)
 
 [node name="fakePlat7" parent="." instance=ExtResource("24_41dm7")]
 position = Vector2(1072, -43584)
@@ -1165,7 +1139,6 @@ scale = Vector2(0.9, 0.9)
 [node name="Area2D8" parent="." instance=ExtResource("15_b786a")]
 position = Vector2(1300, -39051)
 scale = Vector2(0.95, 0.95)
-switch = true
 
 [node name="StaticBody2D8" parent="." instance=ExtResource("16_jt8ge")]
 position = Vector2(1301, -39047)
@@ -1174,7 +1147,6 @@ scale = Vector2(0.9, 0.9)
 [node name="Area2D9" parent="." instance=ExtResource("15_b786a")]
 position = Vector2(776, -39051)
 scale = Vector2(0.95, 0.95)
-switch = true
 
 [node name="StaticBody2D9" parent="." instance=ExtResource("16_jt8ge")]
 position = Vector2(777, -39047)
@@ -1183,7 +1155,6 @@ scale = Vector2(0.9, 0.9)
 [node name="Area2D10" parent="." instance=ExtResource("15_b786a")]
 position = Vector2(1496, -39736)
 scale = Vector2(0.95, 0.95)
-switch = true
 
 [node name="StaticBody2D10" parent="." instance=ExtResource("16_jt8ge")]
 position = Vector2(1497, -39732)
@@ -1192,7 +1163,6 @@ scale = Vector2(0.9, 0.9)
 [node name="Area2D11" parent="." instance=ExtResource("15_b786a")]
 position = Vector2(590, -39736)
 scale = Vector2(0.95, 0.95)
-switch = true
 
 [node name="StaticBody2D11" parent="." instance=ExtResource("16_jt8ge")]
 position = Vector2(591, -39732)
@@ -1201,3 +1171,56 @@ scale = Vector2(0.9, 0.9)
 [node name="onPumpkin_3_30" parent="." instance=ExtResource("15_b786a")]
 position = Vector2(384, -41638)
 scale = Vector2(0.9, 0.9)
+
+[node name="Area2D12" parent="." instance=ExtResource("26_86te5")]
+position = Vector2(1072, -45488)
+scale = Vector2(0.9, 0.9)
+
+[node name="Area2D14" parent="." instance=ExtResource("26_86te5")]
+position = Vector2(1860, -38728)
+scale = Vector2(0.9, 0.9)
+speed = 20
+distance = 40
+
+[node name="Area2D15" parent="." instance=ExtResource("26_86te5")]
+position = Vector2(2168, -41848)
+scale = Vector2(0.9, 0.9)
+speed = 15
+distance = 30
+
+[node name="Area2D13" parent="." instance=ExtResource("27_jhuyr")]
+position = Vector2(1158, -25664)
+scale = Vector2(0.9, 0.9)
+vert = false
+
+[node name="Area2D16" parent="." instance=ExtResource("27_jhuyr")]
+position = Vector2(1336, -26784)
+scale = Vector2(0.9, 0.9)
+speed = 15
+distance = 30
+
+[node name="Area2D17" parent="." instance=ExtResource("27_jhuyr")]
+position = Vector2(725, -26976)
+scale = Vector2(0.9, 0.9)
+
+[node name="Area2D18" parent="." instance=ExtResource("27_jhuyr")]
+position = Vector2(1336, -27800)
+scale = Vector2(0.9, 0.9)
+
+[node name="Area2D19" parent="." instance=ExtResource("27_jhuyr")]
+position = Vector2(725, -27639)
+scale = Vector2(0.9, 0.9)
+
+[node name="StaticBody2D12" parent="." instance=ExtResource("28_pgtsl")]
+position = Vector2(2296, -25360)
+
+[node name="StaticBody2D13" parent="." instance=ExtResource("28_pgtsl")]
+position = Vector2(-210, -25352)
+rotation = 3.14159
+
+[node name="StaticBody2D14" parent="." instance=ExtResource("28_pgtsl")]
+position = Vector2(2296, -38944)
+
+[node name="StaticBody2D15" parent="." instance=ExtResource("28_pgtsl")]
+position = Vector2(-210, -38936)
+rotation = 3.14159

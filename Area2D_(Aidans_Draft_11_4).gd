@@ -118,8 +118,9 @@ func _on_area_2d_area_exited(area):
 
 func _on_area_2d_2_area_entered(area):
 	freeFall = true
-	player_sprite.flip_v = true
 	velocity = Vector2(0,600)
+	await get_tree().create_timer(0.2).timeout
+	player_sprite.flip_v = true
 	await get_tree().create_timer(1.5).timeout
 	freeFall = false
 	player_sprite.flip_v = false

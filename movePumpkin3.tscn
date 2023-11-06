@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://bd2ttxguuw0l2"]
+
+[ext_resource type="Script" path="res://movePumpkin3.gd" id="1_uvgen"]
+[ext_resource type="Texture2D" uid="uid://dny2hr6vqv0eo" path="res://art/LEVEL 3 ASSETS/pumpkin lit.png" id="2_q6xut"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_76csr"]
+radius = 104.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uhya0"]
+size = Vector2(184, 80)
+
+[node name="Area2D" type="Area2D"]
+collision_layer = 5
+script = ExtResource("1_uvgen")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.749977, -17.7672)
+scale = Vector2(0.938356, 0.938356)
+texture = ExtResource("2_q6xut")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.749977, 6.23285)
+shape = SubResource("CircleShape2D_76csr")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(4.74998, -89.7672)
+shape = SubResource("RectangleShape2D_uhya0")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

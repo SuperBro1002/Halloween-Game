@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://da8divwaq1s7i"]
+[gd_scene load_steps=8 format=3 uid="uid://da8divwaq1s7i"]
 
 [ext_resource type="Texture2D" uid="uid://ci44jvjx6nwc4" path="res://art/LEVEL 3 ASSETS/crumble stone 1.png" id="1_5k3qf"]
+[ext_resource type="Texture2D" uid="uid://ds247egluxys0" path="res://art/LEVEL 3 ASSETS/crumble stone 2.png" id="2_oncld"]
+[ext_resource type="Texture2D" uid="uid://crgh1stlhdxu4" path="res://art/LEVEL 3 ASSETS/crumble stone 3.png" id="3_h4hre"]
 
 [sub_resource type="GDScript" id="GDScript_2okvt"]
 script/source = "extends StaticBody2D
@@ -18,8 +20,11 @@ func _process(_delta):
 
 func _on_area_2d_body_entered(_body):
 	await get_tree().create_timer(0.5).timeout
+	$Sprite2D.play()
+	$Sprite2D.animation = \"Collapse\"
+	await get_tree().create_timer(0.5).timeout
+	$Sprite2D.stop()
 	hide()
-	#touching.emit()
 	$CollisionShape2D.set_deferred(\"disabled\", true)
 
 
@@ -28,6 +33,23 @@ func _on_area_2d_body_exited(_body):
 	show()
 	$CollisionShape2D.set_deferred(\"disabled\", false)
 "
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dhlyo"]
+animations = [{
+"frames": [{
+"duration": 0.7,
+"texture": ExtResource("1_5k3qf")
+}, {
+"duration": 0.7,
+"texture": ExtResource("2_oncld")
+}, {
+"duration": 0.7,
+"texture": ExtResource("3_h4hre")
+}],
+"loop": false,
+"name": &"Collapse",
+"speed": 4.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_is5ad"]
 size = Vector2(384, 72)
@@ -39,9 +61,10 @@ size = Vector2(382, 20)
 scale = Vector2(8, 8)
 script = SubResource("GDScript_2okvt")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0.875, -13.125)
-texture = ExtResource("1_5k3qf")
+sprite_frames = SubResource("SpriteFrames_dhlyo")
+animation = &"Collapse"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, -21)

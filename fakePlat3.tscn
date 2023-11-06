@@ -1,6 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://rd83smhsg2rb"]
+[gd_scene load_steps=9 format=3 uid="uid://rd83smhsg2rb"]
 
-[ext_resource type="Texture2D" uid="uid://ci44jvjx6nwc4" path="res://art/LEVEL 3 ASSETS/crumble stone 1.png" id="1_mlcb1"]
+[ext_resource type="Texture2D" uid="uid://bumrc10mkglt8" path="res://art/LEVEL 3 ASSETS/fake crumble 1.png" id="1_vj3v4"]
+[ext_resource type="Texture2D" uid="uid://bgvfwmyxyg0fw" path="res://art/LEVEL 3 ASSETS/fake crumble 2.png" id="2_47yu5"]
+[ext_resource type="Texture2D" uid="uid://c230k8mnw74ff" path="res://art/LEVEL 3 ASSETS/fake crumble 3.png" id="3_j0rxs"]
+[ext_resource type="Texture2D" uid="uid://cd4wemgohguqu" path="res://art/LEVEL 3 ASSETS/fake crumble 4.png" id="4_nvnrj"]
 
 [sub_resource type="GDScript" id="GDScript_2okvt"]
 script/source = "extends StaticBody2D
@@ -17,8 +20,31 @@ func _process(_delta):
 
 
 func _on_area_2d_area_entered(area):
+	$sprite.play()
+	$sprite.animation = \"Collapse\"
+	await get_tree().create_timer(0.2).timeout
 	queue_free()
 "
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ignh"]
+animations = [{
+"frames": [{
+"duration": 0.2,
+"texture": ExtResource("1_vj3v4")
+}, {
+"duration": 0.2,
+"texture": ExtResource("2_47yu5")
+}, {
+"duration": 0.2,
+"texture": ExtResource("3_j0rxs")
+}, {
+"duration": 0.2,
+"texture": ExtResource("4_nvnrj")
+}],
+"loop": false,
+"name": &"Collapse",
+"speed": 4.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_is5ad"]
 size = Vector2(384, 72)
@@ -30,9 +56,10 @@ size = Vector2(378, 4.375)
 scale = Vector2(0.75, 1)
 script = SubResource("GDScript_2okvt")
 
-[node name="sprite" type="Sprite2D" parent="."]
+[node name="sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -14)
-texture = ExtResource("1_mlcb1")
+sprite_frames = SubResource("SpriteFrames_8ignh")
+animation = &"Collapse"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, -21)

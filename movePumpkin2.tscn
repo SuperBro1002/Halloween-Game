@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://6v8iv3tm8jk2"]
+
+[ext_resource type="Script" path="res://movePumpkin2.gd" id="1_ykduc"]
+[ext_resource type="Texture2D" uid="uid://cywmo5ckdjvax" path="res://art/Evil pump-1.png" id="2_ffhmn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_76csr"]
+radius = 96.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5ymqf"]
+radius = 64.0
+
+[node name="Area2D" type="Area2D"]
+position = Vector2(0, 1)
+collision_layer = 5
+script = ExtResource("1_ykduc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -32)
+texture = ExtResource("2_ffhmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_76csr")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, -96)
+shape = SubResource("CircleShape2D_5ymqf")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

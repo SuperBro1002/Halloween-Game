@@ -1,7 +1,26 @@
-[gd_scene load_steps=6 format=3 uid="uid://wpeebgc64b58"]
+[gd_scene load_steps=9 format=3 uid="uid://wpeebgc64b58"]
 
 [ext_resource type="Script" path="res://Area2D_(Aidans_Draft_11_4).gd" id="1_njxog"]
-[ext_resource type="Texture2D" uid="uid://d326lfthgranj" path="res://art/Reaper_Test.png" id="2_vovnq"]
+[ext_resource type="Texture2D" uid="uid://d326lfthgranj" path="res://art/Player1.png" id="2_84o2u"]
+[ext_resource type="Texture2D" uid="uid://dbuhw0hr4lp4m" path="res://art/Level 2 Final And Finish Assets/Grim 2.png" id="3_riii6"]
+[ext_resource type="Texture2D" uid="uid://r6yfj2jww5qm" path="res://art/LEVEL 3 ASSETS/Player 3.png" id="4_w3twp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i5f8o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_84o2u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_riii6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_w3twp")
+}],
+"loop": true,
+"name": &"Style",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_arsxe"]
 size = Vector2(214, 248)
@@ -20,9 +39,10 @@ platform_on_leave = 1
 script = ExtResource("1_njxog")
 metadata/_edit_group_ = true
 
-[node name="AnimatedSprite2D" type="Sprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(1.06667, 0.996894)
-texture = ExtResource("2_vovnq")
+sprite_frames = SubResource("SpriteFrames_i5f8o")
+animation = &"Style"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, -8)
