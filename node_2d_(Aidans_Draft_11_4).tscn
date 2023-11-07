@@ -1,12 +1,14 @@
-[gd_scene load_steps=34 format=3 uid="uid://dwtc0qqsxvnta"]
+[gd_scene load_steps=36 format=3 uid="uid://dwtc0qqsxvnta"]
 
 [ext_resource type="PackedScene" uid="uid://wpeebgc64b58" path="res://player.tscn" id="1_1ou36"]
 [ext_resource type="Texture2D" uid="uid://dmpljr4aql3ya" path="res://art/BackFinal1.png" id="2_4560s"]
-[ext_resource type="Texture2D" uid="uid://g60vgn30v1if" path="res://art/BackFinal2.png" id="3_hufax"]
+[ext_resource type="Texture2D" uid="uid://bag2se7hwv3r" path="res://art/background_lvl_2_part_1.png" id="3_v4acu"]
+[ext_resource type="Texture2D" uid="uid://c3ieuvpov1oau" path="res://art/background_lvl_2_part_2.png" id="4_3aytv"]
 [ext_resource type="PackedScene" uid="uid://crlj52c142iyd" path="res://fallPlat.tscn" id="4_bgjjx"]
-[ext_resource type="Texture2D" uid="uid://cbkuym2urrtcp" path="res://art/BackFinal3.png" id="4_srkrc"]
+[ext_resource type="Texture2D" uid="uid://ckc2p5xcanxo1" path="res://art/background_lvl_3_part_1.png" id="5_3o3nl"]
 [ext_resource type="PackedScene" uid="uid://dfka6viqcea3" path="res://oneWayPlat.tscn" id="5_nse36"]
 [ext_resource type="PackedScene" uid="uid://1t80otj3ie32" path="res://fallPlat2.tscn" id="5_yskdf"]
+[ext_resource type="Texture2D" uid="uid://rtm7rhjrrsfk" path="res://art/background_lvl_3_part_2.png" id="6_40phd"]
 [ext_resource type="PackedScene" uid="uid://b85lne138o0ux" path="res://solidPlat1.tscn" id="6_404nw"]
 [ext_resource type="PackedScene" uid="uid://f70ba6hgdxal" path="res://horiMovingPlat.tscn" id="7_b1ipe"]
 [ext_resource type="PackedScene" uid="uid://c2kqnya7mpqog" path="res://oneWayPlat2.tscn" id="7_haw4c"]
@@ -60,15 +62,21 @@ texture = ExtResource("2_4560s")
 metadata/_edit_lock_ = true
 
 [node name="BG2" type="Sprite2D" parent="."]
-position = Vector2(1040, -21227)
-texture = ExtResource("3_hufax")
-metadata/_edit_lock_ = true
+position = Vector2(1040, -17017)
+texture = ExtResource("3_v4acu")
+
+[node name="Back2" type="Sprite2D" parent="."]
+position = Vector2(1040, -25437)
+texture = ExtResource("4_3aytv")
 
 [node name="BG3" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(1040, -39447)
-texture = ExtResource("4_srkrc")
-metadata/_edit_lock_ = true
+position = Vector2(1040, -34551)
+texture = ExtResource("5_3o3nl")
+
+[node name="Back3" type="Sprite2D" parent="."]
+position = Vector2(1040, -44359)
+texture = ExtResource("6_40phd")
 
 [node name="fallPlat" parent="." instance=ExtResource("4_bgjjx")]
 position = Vector2(200, -2620)
