@@ -1,7 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://dwtc0qqsxvnta"]
+[gd_scene load_steps=11 format=3 uid="uid://dwtc0qqsxvnta"]
 
 [ext_resource type="Texture2D" uid="uid://dvdmmcc5hyqkm" path="res://art/LEVEL_1_BACKGROUND1111.jpg" id="2_y1q8h"]
-[ext_resource type="Texture2D" path="res://art/bg2.jpg" id="3_nh2e7"]
 [ext_resource type="PackedScene" uid="uid://crlj52c142iyd" path="res://fallPlat.tscn" id="4_bgjjx"]
 [ext_resource type="PackedScene" uid="uid://dfka6viqcea3" path="res://oneWayPlat.tscn" id="5_nse36"]
 [ext_resource type="PackedScene" uid="uid://b85lne138o0ux" path="res://solidPlat1.tscn" id="6_404nw"]
@@ -25,7 +24,6 @@ metadata/_edit_lock_ = true
 visibility_layer = 524288
 z_index = -1
 position = Vector2(1040, -10696)
-texture = ExtResource("3_nh2e7")
 metadata/_edit_lock_ = true
 
 [node name="fallPlat" parent="." instance=ExtResource("4_bgjjx")]

@@ -1,8 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://wpeebgc64b58"]
+[gd_scene load_steps=10 format=3 uid="uid://wpeebgc64b58"]
 
 [ext_resource type="Script" path="res://Area2D_(Aidans_Draft_11_4).gd" id="1_njxog"]
 [ext_resource type="Texture2D" uid="uid://d326lfthgranj" path="res://art/Player1.png" id="2_84o2u"]
-[ext_resource type="Texture2D" uid="uid://dbuhw0hr4lp4m" path="res://art/Level 2 Final And Finish Assets/Grim 2.png" id="3_riii6"]
+[ext_resource type="Texture2D" uid="uid://csx1h6sfmjx7c" path="res://art/Level 2 Final And Finish Assets/Grim 2.png" id="3_riii6"]
 [ext_resource type="Texture2D" uid="uid://r6yfj2jww5qm" path="res://art/LEVEL 3 ASSETS/Player 3.png" id="4_w3twp"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_i5f8o"]
@@ -19,7 +19,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Style",
-"speed": 5.0
+"speed": 1.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_arsxe"]
@@ -30,6 +30,9 @@ size = Vector2(214, 248)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qux18"]
 size = Vector2(214, 248)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fui2i"]
+size = Vector2(214, 254)
 
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(512, 296)
@@ -63,6 +66,28 @@ collision_mask = 16
 position = Vector2(-1, -8)
 shape = SubResource("RectangleShape2D_qux18")
 
+[node name="StyleSwitch" type="Area2D" parent="."]
+collision_layer = 4352
+collision_mask = 30464
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StyleSwitch"]
+position = Vector2(-1, -5)
+shape = SubResource("RectangleShape2D_fui2i")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -840.0
+offset_top = -234.0
+offset_right = 842.0
+offset_bottom = -155.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 11
+theme_override_font_sizes/font_size = 55
+text = "I can perform a dash with SPACEBAR!"
+horizontal_alignment = 1
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
 [connection signal="area_entered" from="Area2D2" to="." method="_on_area_2d_2_area_entered"]
+[connection signal="area_entered" from="StyleSwitch" to="." method="_on_style_switch_area_entered"]
+[connection signal="body_entered" from="StyleSwitch" to="." method="_on_style_switch_body_entered"]
+[connection signal="body_exited" from="StyleSwitch" to="." method="_on_style_switch_body_exited"]

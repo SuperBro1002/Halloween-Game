@@ -1,16 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://djtvcfwq4i1ws"]
+[gd_scene load_steps=4 format=3 uid="uid://djtvcfwq4i1ws"]
 
 [ext_resource type="Script" path="res://icePlat3.gd" id="1_g3bqy"]
 [ext_resource type="Texture2D" uid="uid://bdue4kyns8754" path="res://art/LEVEL 3 ASSETS/ice platform.png" id="2_ajali"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_01kkk"]
-friction = 0.0
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bby3l"]
 size = Vector2(383, 84)
 
-[node name="Node2D" type="StaticBody2D"]
-physics_material_override = SubResource("PhysicsMaterial_01kkk")
+[node name="StaticBody2D" type="StaticBody2D"]
+collision_layer = 4097
+collision_mask = 4097
 script = ExtResource("1_g3bqy")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

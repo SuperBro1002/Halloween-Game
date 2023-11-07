@@ -1,0 +1,80 @@
+[gd_scene load_steps=10 format=3 uid="uid://wpeebgc64b58"]
+
+[ext_resource type="Script" path="res://Area2D_(Aidans_Draft_11_4).gd" id="1_njxog"]
+[ext_resource type="Texture2D" uid="uid://d326lfthgranj" path="res://art/Player1.png" id="2_84o2u"]
+[ext_resource type="Texture2D" uid="uid://csx1h6sfmjx7c" path="res://art/Level 2 Final And Finish Assets/Grim 2.png" id="3_riii6"]
+[ext_resource type="Texture2D" uid="uid://r6yfj2jww5qm" path="res://art/LEVEL 3 ASSETS/Player 3.png" id="4_w3twp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i5f8o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_84o2u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_riii6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_w3twp")
+}],
+"loop": true,
+"name": &"Style",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_arsxe"]
+size = Vector2(214, 248)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7co73"]
+size = Vector2(214, 248)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qux18"]
+size = Vector2(214, 248)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fui2i"]
+size = Vector2(214, 248)
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(512, 296)
+scale = Vector2(0.5, 0.5)
+collision_layer = 3
+platform_on_leave = 1
+script = ExtResource("1_njxog")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.06667, 0.996894)
+sprite_frames = SubResource("SpriteFrames_i5f8o")
+animation = &"Style"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -8)
+shape = SubResource("RectangleShape2D_arsxe")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1, -8)
+shape = SubResource("RectangleShape2D_7co73")
+
+[node name="Area2D2" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(-1, -8)
+shape = SubResource("RectangleShape2D_qux18")
+
+[node name="StyleSwitch" type="Area2D" parent="."]
+collision_layer = 256
+collision_mask = 1792
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StyleSwitch"]
+position = Vector2(-1, -8)
+shape = SubResource("RectangleShape2D_fui2i")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="area_entered" from="Area2D2" to="." method="_on_area_2d_2_area_entered"]
+[connection signal="area_entered" from="StyleSwitch" to="." method="_on_style_switch_area_entered"]
