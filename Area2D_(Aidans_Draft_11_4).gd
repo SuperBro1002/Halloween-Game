@@ -149,6 +149,8 @@ func _on_style_switch_area_entered(area):
 	if area.get_collision_layer_value(15) == true:
 		double_jump = true
 		jumpTutorial()
+	if area.get_collision_layer_value(16) == true:
+		get_tree().quit()
 
 func dashTutorial():
 	$Label.show()

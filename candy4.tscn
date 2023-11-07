@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7mws1hpe0dxj"]
+
+[ext_resource type="Script" path="res://candy2.gd" id="1_i6git"]
+[ext_resource type="Texture2D" uid="uid://bh7p3umam7d1m" path="res://art/LEVEL 3 ASSETS/candy upgrade.png" id="2_f8vmr"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g43hy"]
+radius = 41.8472
+height = 151.632
+
+[node name="Area2D" type="Area2D"]
+collision_layer = 16384
+collision_mask = 4096
+script = ExtResource("1_i6git")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-9.53674e-07, 1.90735e-06)
+scale = Vector2(0.580049, 0.580049)
+texture = ExtResource("2_f8vmr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.19209e-07, 3)
+rotation = -0.837758
+shape = SubResource("CapsuleShape2D_g43hy")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

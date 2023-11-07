@@ -68,7 +68,7 @@ shape = SubResource("RectangleShape2D_qux18")
 
 [node name="StyleSwitch" type="Area2D" parent="."]
 collision_layer = 4352
-collision_mask = 30464
+collision_mask = 63232
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StyleSwitch"]
 position = Vector2(-1, -5)
